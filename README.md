@@ -1,16 +1,17 @@
 # Browserbots_Hashcode_Hackathon
-🤖 FLYO - Natural Language Browser Automation
+**🤖 FLYO - Natural Language Browser Automation**
+
 Transform natural language into browser automation - No code required, just tell FLYO what you want.
 
 Problem: Navigating complex websites is time-consuming and frustrating. Users waste hours filling forms, clicking through menus, and repeating tedious tasks.
+
 Solution: FLYO converts plain English commands into automated browser actions using AI planning and execution.
 
-🎬 Demo
+**🎬 Demo**
 bash$ python -m flyo "Book the cheapest flight from Mumbai to Delhi for tomorrow"
 
-╔══════════════════════════════════════════════════════════╗
-║           FLYO - Natural Language Browser Bot            ║
-╚══════════════════════════════════════════════════════════╝
+ <h1><b>FLYO - Natural Language Browser Bot</b></h1>
+           
 
 ✓ Generated plan with 8 steps
 → Navigating to Google Flights...
@@ -21,7 +22,7 @@ bash$ python -m flyo "Book the cheapest flight from Mumbai to Delhi for tomorrow
 ✓ Task completed in 12.3s
 Show Image
 
-✨ Features
+**✨ Features**
 
 🗣️ Natural Language Input - Just describe what you want in plain English
 🧠 AI-Powered Planning - LLM converts requests into executable action plans
@@ -32,7 +33,7 @@ Show Image
 📊 State Tracking - FSM ensures robust execution and rollback
 
 
-🚀 Quick Start
+**🚀 Quick Start**
 Prerequisites
 
 Python 3.9 or higher
@@ -40,7 +41,7 @@ OpenAI API key (or local Ollama setup)
 
 Installation
 bash# Clone repository
-git clone https://github.com/your-team/flyo-hackathon.git
+git clone https://github.com/ShivKum10/Browserbots_Hashcode_Hackathon.git
 cd flyo-hackathon
 
 # Create virtual environment
@@ -65,29 +66,20 @@ python -m flyo "Book a flight from Mumbai to Delhi" --config configs/google_flig
 # Skip approval (for demos)
 python -m flyo "Your task here" --no-approval
 
-🏗️ Architecture
-┌─────────────────┐
-│  User Request   │  "Book flight Mumbai → Delhi"
-│  (Natural Lang) │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  LLM Planner    │  GPT-4 / Qwen 7B
-│  (Action Plan)  │  → JSON action array
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  FSM Controller │  PLANNING → APPROVAL → EXECUTING
-│  (State Mgmt)   │  → ERROR → SELF_HEALING → COMPLETED
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ Browser Executor│  Playwright (Chromium/Firefox/WebKit)
-│  (Actions)      │  navigate, click, type, extract, submit
-└─────────────────┘
+**🏗️ Architecture**
+
+User Request:
+Takes a natural language command like "Book flight Mumbai → Delhi".
+
+LLM Planner:
+Uses GPT-4 or Qwen 7B to convert the request into a structured action plan (JSON action array).
+
+FSM Controller:
+Handles the flow between different stages — Planning → Approval → Executing → Error → Self-Healing → Completed.
+
+Browser Executor:
+Uses Playwright (Chromium / Firefox / WebKit) to perform actions like navigation, clicking, typing, extracting data, and submitting forms
+
 Tech Stack:
 
 LLM: OpenAI GPT-4 / GPT-3.5-turbo (cloud) or Qwen 7B via Ollama (local)
@@ -97,7 +89,7 @@ Async: Python asyncio - Concurrent execution without threads
 Storage: SQLite (for caching) + in-memory state
 
 
-📖 Usage Examples
+**📖 Usage Examples**
 Example 1: Google Search
 pythonfrom flyo import FlyoAgent, OpenAIPlanner
 
@@ -116,7 +108,7 @@ bashpython -m flyo \\
   "Go to IRCTC, book train from Mumbai to Delhi for tomorrow, select AC 2-tier" \\
   --config configs/irctc.json
 
-⚙️ Configuration
+**⚙️ Configuration**
 Site-Specific Configs
 Create JSON files for your target websites:
 json{
@@ -140,7 +132,7 @@ export FLYO_MODEL="gpt-4"              # Default: gpt-3.5-turbo
 export FLYO_HEADLESS="false"           # Show browser window
 export FLYO_TIMEOUT="30"               # Action timeout in seconds
 
-🧪 Testing
+**🧪 Testing**
 bash# Run all tests
 ./run_tests.sh
 
@@ -150,7 +142,7 @@ pytest tests/test_planner.py -v
 # Run with coverage
 pytest --cov=flyo tests/
 
-🎯 Project Structure
+**🎯 Project Structure**
 flyo/
 ├── agent.py        # Main orchestrator (FlyoAgent)
 ├── fsm.py          # State machine (AgentState, ExecutionContext)
@@ -159,7 +151,7 @@ flyo/
 ├── cli.py          # Command-line interface
 └── utils.py        # Helpers (colors, logging, formatters)
 
-🔒 Safety & Ethics
+**🔒 Safety & Ethics**
 FLYO includes built-in safety measures:
 
 Risk Detection - Flags dangerous actions (payments, deletions)
@@ -169,7 +161,7 @@ Error Boundaries - Graceful degradation on failures
 Audit Trail - Full logging of all actions taken
 
 
-🛠️ Development
+**🛠️ Development**
 Setup Development Environment
 bash# Install dev dependencies
 pip install -r requirements-dev.txt
@@ -191,12 +183,20 @@ async def execute_action(self, action: Dict[str, Any]) -> Dict[str, Any]:
         await self.page.your_method()
         return {"status": "success"}
 
-📊 Performance
-Benchmarks (on 32GB RAM, Intel Arc GPU):
-TaskStepsTimeSuccess RateGoogle Search43.2s100%Flight Search812.5s95%Form Submission1218.3s92%Complex Workflow20+35.7s88%
-Tested on stable internet connection (50 Mbps) with OpenAI GPT-3.5-turbo
+## 📊 **Performance**
 
-🐛 Troubleshooting
+| **Task**           | **Steps** | **Time** | **Success Rate** |
+|--------------------|:---------:|:--------:|:----------------:|
+| 🔍 Google Search    | 4         | 3.2s     | ✅ 100%           |
+| ✈️ Flight Search     | 8         | 12.5s    | ✅ 95%            |
+| 📝 Form Submission   | 12        | 18.3s    | ✅ 92%            |
+| ⚙️ Complex Workflow  | 20+       | 35.7s    | ⚡ 88%            |
+
+> **Environment:** 32GB RAM • Intel Arc GPU • Stable 50 Mbps Internet  
+> **Model Used:** OpenAI GPT-3.5-Turbo
+
+
+**🐛 Troubleshooting**
 "Playwright timeout - element not found"
 
 Fix: Check selector accuracy using DevTools (F12)
@@ -214,7 +214,7 @@ Fix: Use template-based fallback
 
 See docs/TROUBLESHOOTING.md for more.
 
-🗺️ Roadmap
+**🗺️ Roadmap**
 
  Core FSM + LLM planning
  Playwright executor with 7 actions
@@ -230,7 +230,7 @@ See docs/TROUBLESHOOTING.md for more.
  Cloud deployment (AWS/GCP)
 
 
-🤝 Contributing
+**🤝 Contributing**
 We welcome contributions! Please see CONTRIBUTING.md for guidelines.
 bash# Fork the repo, create a branch
 git checkout -b feature/your-feature
@@ -241,10 +241,10 @@ git commit -m "Add your feature"
 # Push and create PR
 git push origin feature/your-feature
 
-📜 License
+**📜 License**
 This project is licensed under the MIT License - see LICENSE file.
 
-👥 Team
+**👥 Team**
 HASHCODE 13.0 - PES University
 
 Vivian - Backend Architecture & FSM Design
