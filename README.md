@@ -1,5 +1,5 @@
 # Browserbots_Hashcode_Hackathon
-**🤖 FLYO - Natural Language Browser Automation**
+<h2><b>🤖 FLYO - Natural Language Browser Automation</b></h2>
 
 Transform natural language into browser automation - No code required, just tell FLYO what you want.
 
