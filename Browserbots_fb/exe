@@ -1,0 +1,505 @@
+from playwright.sync_api import sync_playwright
+from fsm import BrowserState
+import re
+from urllib.parse import urlparse, parse_qs
+import time
+
+class FlyoExecutor:
+    SITE_PRODUCT_SELECTORS = {
+        "Amazon": "div[data-component-type='s-search-result']",
+        "Flipkart": "div[data-id]",
+        "Myntra": "li.product-base"
+    }
+
+    def __init__(self, planner, headless=False):
+        self.planner = planner
+        self.playwright = sync_playwright().start()
+        
+        self.browser = self.playwright.chromium.launch(
+            headless=headless,
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--disable-dev-shm-usage',
+                '--no-sandbox',
+                '--start-maximized'
+            ]
+        )
+        
+        self.context = self.browser.new_context(
+            viewport={'width': 1920, 'height': 1080},
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        )
+        
+        self.page = self.context.new_page()
+        
+        self.page.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {
+                get: () => undefined
+            });
+        """)
+        
+        self.fsm = BrowserState()
+
+        self.ecommerce_sites = [
+            {"name": "Amazon", "search_url": "https://www.amazon.in/s?k={query}"},
+            {"name": "Flipkart", "search_url": "https://www.flipkart.com/search?q={query}"}
+        ]
+        
+        self.site_name_map = {site['name'].lower(): site for site in self.ecommerce_sites}
+
+
+    def _clean_price_for_sort(self, item):
+        price = item.get("price")
+        if isinstance(price, (int, float)):
+            return price
+        
+        if isinstance(price, str):
+            cleaned = re.sub(r'[₹$,\s]', '', price)
+            try:
+                return float(cleaned)
+            except ValueError:
+                pass
+        return float("inf")
+
+
+    def _correct_item_link(self, item, website):
+        link = item.get("link", "").strip()
+        if not link:
+            return ""
+
+        base_urls = {
+            "Amazon": "https://www.amazon.in",
+            "Flipkart": "https://www.flipkart.com",
+            "Myntra": "https://www.myntra.com"
+        }
+        base_url = base_urls.get(website, "")
+        
+        # Flipkart link cleaning
+        if website == "Flipkart":
+            if 'flipkart.com' in link:
+                parsed = urlparse(link)
+                path = parsed.path
+                match = re.search(r'(/[^/]+/p/[^/?]+)', path)
+                if match:
+                    clean_path = match.group(1)
+                    params = parse_qs(parsed.query)
+                    if 'pid' in params:
+                        return f"{base_url}{clean_path}?pid={params['pid'][0]}"
+                    return f"{base_url}{clean_path}"
+            
+            if link.startswith('/'):
+                match = re.search(r'(/[^/]+/p/[^/?]+)', link)
+                if match:
+                    return f"{base_url}{match.group(1)}"
+        
+        # Amazon link cleaning
+        if website == "Amazon":
+            if link.lower().startswith('http'):
+                match = re.search(r'(https?://[^/]+)(/dp/[A-Z0-9]{10}|/gp/product/[A-Z0-9]{10})', link)
+                if match:
+                    return match.group(1) + match.group(2)
+            elif link.startswith('/'):
+                match = re.search(r'(/dp/[A-Z0-9]{10}|/gp/product/[A-Z0-9]{10})', link)
+                if match:
+                    return base_url + match.group(0)
+        
+        # Generic handling
+        if link.lower().startswith('http://') or link.lower().startswith('https://'):
+            return link
+
+        if base_url:
+            if link.startswith('/'):
+                return base_url + link
+            else:
+                return f"{base_url}/{link}"
+        
+        return link
+
+
+    def search_products(self, user_command):
+        """Search products without adding to cart - just return the list"""
+        sites_to_search = self.ecommerce_sites
+        cleaned_command = user_command
+        
+        # Check for site-specific search
+        mentioned_site = None
+        for name_lower, site_obj in self.site_name_map.items():
+            if name_lower in user_command.lower():
+                mentioned_site = site_obj
+                cleaned_command = re.sub(name_lower, '', user_command, flags=re.IGNORECASE).strip()
+                cleaned_command = re.sub(r'\b(on|from|at)\b', '', cleaned_command, flags=re.IGNORECASE).strip()
+                break
+
+        if mentioned_site:
+            sites_to_search = [mentioned_site]
+            print(f"🎯 Searching only: {mentioned_site['name']}")
+        else:
+            print(f"🎯 Searching all sites: {', '.join([s['name'] for s in sites_to_search])}")
+
+        query = cleaned_command.replace(" ", "+")
+        all_items = []
+
+        try:
+            for site in sites_to_search:
+                site_name = site["name"]
+                url = site["search_url"].format(query=query)
+                print(f"\n{'='*60}")
+                print(f"🔍 {site_name}: {url}")
+                print(f"{'='*60}")
+                
+                try:
+                    self.page.goto(url, wait_until="domcontentloaded", timeout=40000)
+
+                    # Handle popups
+                    if site_name == "Flipkart":
+                        try:
+                            self.page.press("body", "Escape")
+                            self.page.wait_for_timeout(1000)
+                        except:
+                            pass
+                    
+                    # Wait for products
+                    product_selector = self.SITE_PRODUCT_SELECTORS.get(site_name)
+                    if product_selector:
+                        self.page.wait_for_selector(product_selector, state="attached", timeout=20000)
+                        self.page.wait_for_timeout(2000)
+                    
+                except Exception as e:
+                    print(f"❌ {site_name} failed: {e}")
+                    continue
+
+                # Extract products
+                html_snapshot = self._get_relevant_html(site_name)
+                site_plan = self.planner.generate_plan(user_command, html_snapshot, site_name)
+                
+                for step in site_plan:
+                    if step.get("action") == "extract_item":
+                        item = step.get("item", {})
+                        
+                        if not item.get('price') or not item.get('name'):
+                            continue
+                        
+                        raw_link = item.get('link', '').strip()
+                        if not raw_link or len(raw_link) < 3:
+                            continue
+                        
+                        item["website"] = site_name
+                        corrected_link = self._correct_item_link(item, site_name)
+                        
+                        if not corrected_link or not corrected_link.startswith('http'):
+                            continue
+                        
+                        item["link"] = corrected_link
+                        all_items.append(item)
+                        print(f"✓ {item['name']} - ₹{item['price']}")
+
+            # Sort by price
+            all_items.sort(key=self._clean_price_for_sort)
+            
+            print(f"\n{'='*60}")
+            print(f"📊 FOUND {len(all_items)} PRODUCTS")
+            print(f"{'='*60}\n")
+            
+            return {"all_items": all_items}
+
+        except Exception as e:
+            print(f"❌ Search error: {e}")
+            import traceback
+            traceback.print_exc()
+            return {"all_items": []}
+
+
+    def proceed_to_checkout(self, item):
+        """Add selected item to cart and proceed to checkout page"""
+        site = item["website"]
+        url = item["link"]
+        
+        print(f"\n{'='*60}")
+        print(f"🛒 CHECKOUT AUTOMATION STARTED")
+        print(f"{'='*60}")
+        print(f"Product: {item['name']}")
+        print(f"Price: ₹{item['price']}")
+        print(f"Website: {site}")
+        print(f"URL: {url}")
+        print(f"{'='*60}\n")
+        
+        try:
+            # Step 1: Navigate to product page
+            print("Step 1: Opening product page...")
+            self.page.goto(url, wait_until="networkidle", timeout=35000)
+            self.page.wait_for_timeout(3000)
+            print("✓ Product page loaded")
+            
+            # Step 2: Add to cart (site-specific)
+            if site == "Amazon":
+                success = self._amazon_checkout()
+            elif site == "Flipkart":
+                success = self._flipkart_checkout()
+            else:
+                return {"success": False, "error": f"Checkout not supported for {site}"}
+            
+            return success
+
+        except Exception as e:
+            print(f"❌ Checkout failed: {e}")
+            import traceback
+            traceback.print_exc()
+            return {"success": False, "error": str(e)}
+
+
+    def _amazon_checkout(self):
+        """Amazon-specific checkout automation"""
+        try:
+            print("\n🔵 Amazon Checkout Automation")
+            print("-" * 40)
+            
+            # Step 1: Click Add to Cart
+            print("Step 1: Adding to cart...")
+            add_to_cart_selectors = [
+                "#add-to-cart-button",
+                "input[name='submit.add-to-cart']",
+                ".a-button-input[name='submit.add-to-cart']"
+            ]
+            
+            clicked = False
+            for selector in add_to_cart_selectors:
+                try:
+                    self.page.wait_for_selector(selector, state="visible", timeout=5000)
+                    self.page.click(selector)
+                    clicked = True
+                    print("✓ Added to cart")
+                    break
+                except:
+                    continue
+            
+            if not clicked:
+                print("❌ Could not find Add to Cart button")
+                return {"success": False, "error": "Add to Cart button not found"}
+            
+            self.page.wait_for_timeout(3000)
+            
+            # Step 2: Proceed to checkout
+            print("Step 2: Proceeding to checkout...")
+            
+            # Try to click "Proceed to Buy" / "Proceed to Checkout"
+            checkout_selectors = [
+                "#sc-buy-box-ptc-button",
+                "input[name='proceedToRetailCheckout']",
+                "//span[contains(text(), 'Proceed to Buy')]",
+                "#attach-sidesheet-checkout-button"
+            ]
+            
+            reached_checkout = False
+            for selector in checkout_selectors:
+                try:
+                    if selector.startswith("//"):
+                        element = self.page.wait_for_selector(f"xpath={selector}", state="visible", timeout=5000)
+                        element.click()
+                    else:
+                        self.page.wait_for_selector(selector, state="visible", timeout=5000)
+                        self.page.click(selector)
+                    
+                    reached_checkout = True
+                    print("✓ Navigated to checkout")
+                    break
+                except:
+                    continue
+            
+            self.page.wait_for_timeout(3000)
+            
+            # Check if we're on checkout page
+            current_url = self.page.url
+            if 'checkout' in current_url or 'buy' in current_url or 'signin' in current_url:
+                reached_checkout = True
+            
+            print(f"\nCurrent URL: {current_url}")
+            print("\n" + "="*60)
+            print("✅ AUTOMATION COMPLETE")
+            print("="*60)
+            print("Status: Item in cart")
+            if reached_checkout:
+                print("Position: Checkout/Login page")
+                print("\n⚠️  Please complete login and payment manually in the browser")
+            else:
+                print("Position: Cart page")
+                print("\n⚠️  Please click 'Proceed to Buy' and complete payment manually")
+            print("="*60 + "\n")
+            
+            return {
+                "success": True,
+                "reached_checkout": reached_checkout,
+                "message": "Added to cart successfully"
+            }
+
+        except Exception as e:
+            print(f"❌ Amazon checkout error: {e}")
+            return {"success": False, "error": str(e)}
+
+
+    def _flipkart_checkout(self):
+        """Flipkart-specific checkout automation"""
+        try:
+            print("\n🟢 Flipkart Checkout Automation")
+            print("-" * 40)
+            
+            # Step 1: Close login popup if present
+            try:
+                close_selectors = ["button._2KpZ6l._2doB4z", "button._2KpZ6l.QXhDTZ"]
+                for selector in close_selectors:
+                    try:
+                        self.page.click(selector, timeout=2000)
+                        print("✓ Closed login popup")
+                        break
+                    except:
+                        continue
+            except:
+                pass
+            
+            self.page.wait_for_timeout(1000)
+            
+            # Step 2: Add to cart
+            print("Step 1: Adding to cart...")
+            add_to_cart_selectors = [
+                "button._2KpZ6l._2U9uOA._3v1-ww",
+                "//button[contains(text(), 'ADD TO CART')]",
+                "button.QqFHMw"
+            ]
+            
+            clicked = False
+            for selector in add_to_cart_selectors:
+                try:
+                    if selector.startswith("//"):
+                        element = self.page.wait_for_selector(f"xpath={selector}", state="visible", timeout=5000)
+                        element.click()
+                    else:
+                        self.page.wait_for_selector(selector, state="visible", timeout=5000)
+                        self.page.click(selector)
+                    
+                    clicked = True
+                    print("✓ Added to cart")
+                    break
+                except Exception as e:
+                    continue
+            
+            if not clicked:
+                print("❌ Could not find Add to Cart button")
+                return {"success": False, "error": "Add to Cart button not found"}
+            
+            self.page.wait_for_timeout(3000)
+            
+            # Step 3: Go to cart and checkout
+            print("Step 2: Navigating to cart...")
+            
+            # Try clicking cart icon or "Go to Cart" button
+            try:
+                cart_selectors = [
+                    "a[href='/viewcart']",
+                    "//a[contains(@href, 'viewcart')]",
+                    "//span[contains(text(), 'Cart')]"
+                ]
+                
+                for selector in cart_selectors:
+                    try:
+                        if selector.startswith("//"):
+                            element = self.page.wait_for_selector(f"xpath={selector}", state="visible", timeout=3000)
+                            element.click()
+                        else:
+                            self.page.wait_for_selector(selector, state="visible", timeout=3000)
+                            self.page.click(selector)
+                        print("✓ Opened cart")
+                        break
+                    except:
+                        continue
+                
+                self.page.wait_for_timeout(3000)
+            except:
+                print("⚠️  Cart link not found, continuing...")
+            
+            # Step 4: Proceed to checkout
+            print("Step 3: Proceeding to checkout...")
+            
+            place_order_selectors = [
+                "//span[contains(text(), 'Place Order')]",
+                "button._2KpZ6l._2U9uOA._3v1-ww",
+                "//button[contains(@class, '_2KpZ6l') and contains(@class, '_2U9uOA')]"
+            ]
+            
+            reached_checkout = False
+            for selector in place_order_selectors:
+                try:
+                    if selector.startswith("//"):
+                        element = self.page.wait_for_selector(f"xpath={selector}", state="visible", timeout=5000)
+                        element.click()
+                    else:
+                        self.page.wait_for_selector(selector, state="visible", timeout=5000)
+                        self.page.click(selector)
+                    
+                    reached_checkout = True
+                    print("✓ Navigated to checkout")
+                    break
+                except:
+                    continue
+            
+            self.page.wait_for_timeout(3000)
+            
+            # Check current page
+            current_url = self.page.url
+            if 'checkout' in current_url or 'login' in current_url or 'account' in current_url:
+                reached_checkout = True
+            
+            print(f"\nCurrent URL: {current_url}")
+            print("\n" + "="*60)
+            print("✅ AUTOMATION COMPLETE")
+            print("="*60)
+            print("Status: Item in cart")
+            if reached_checkout:
+                print("Position: Checkout/Login page")
+                print("\n⚠️  Please complete login and payment manually in the browser")
+            else:
+                print("Position: Cart page")
+                print("\n⚠️  Please click 'Place Order' and complete payment manually")
+            print("="*60 + "\n")
+            
+            return {
+                "success": True,
+                "reached_checkout": reached_checkout,
+                "message": "Added to cart successfully"
+            }
+
+        except Exception as e:
+            print(f"❌ Flipkart checkout error: {e}")
+            return {"success": False, "error": str(e)}
+
+
+    def _get_relevant_html(self, site_name):
+        """Get only the relevant product listing section to reduce token usage"""
+        try:
+            selector = self.SITE_PRODUCT_SELECTORS.get(site_name)
+            if selector:
+                elements = self.page.query_selector_all(selector)
+                html_parts = []
+                for i, element in enumerate(elements[:10]):
+                    try:
+                        html_parts.append(element.inner_html())
+                    except:
+                        continue
+                
+                if html_parts:
+                    return "\n---PRODUCT---\n".join(html_parts)
+        except Exception as e:
+            print(f"⚠️  Could not extract focused HTML: {e}")
+        
+        full_html = self.page.content()
+        return full_html[:50000]
+
+
+    def close(self):
+        """Clean up Playwright resources."""
+        print("\n🔴 Closing browser and stopping Playwright...")
+        try:
+            self.context.close()
+            self.browser.close()
+            self.playwright.stop()
+            print("✓ Cleanup complete")
+        except Exception as e:
+            print(f"⚠️  Error during shutdown: {e}")

@@ -1,0 +1,10 @@
+flask==3.0.0
+playwright==1.40.0
+openai==1.6.1
+python-dotenv==1.0.0
+
+# Installation instructions:
+# 1. Install Python dependencies: pip install -r requirements.txt
+# 2. Install Playwright browsers: playwright install chromium
+# 3. Create .env file with your credentials
+# 4. Run the application: python app.py

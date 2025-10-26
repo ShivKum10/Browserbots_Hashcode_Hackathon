@@ -1,0 +1,13 @@
+{
+  "site_name": "Skyscanner",
+  "base_url": "https://www.skyscanner.co.in/",
+  "selectors": {
+    "from_input": "input[name='origin']",
+    "to_input": "input[name='destination']",
+    "departure_date": "input[placeholder*='Depart']",
+    "search_button": "button[aria-label='Search flights']",
+    "results": "div[data-testid='result-item']",
+    "price": "span[data-testid='price']"
+  },
+  "instructions": "Skyscanner requires clicking into input fields before typing. Wait for dropdown suggestions. Date picker opens on click. Results load progressively, wait 5 seconds after search."
+}

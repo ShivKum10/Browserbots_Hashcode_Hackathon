@@ -1,0 +1,14 @@
+{
+  "site_name": "Google Flights",
+  "base_url": "https://www.google.com/flights",
+  "selectors": {
+    "from_input": "input[placeholder*='Where from']",
+    "to_input": "input[placeholder*='Where to']",
+    "departure_date": "input[placeholder*='Departure']",
+    "return_date": "input[placeholder*='Return']",
+    "search_button": "button[aria-label*='Search']",
+    "results_container": "div.gws-flights-results__result-item",
+    "price": "div.YMlIz.FpEdX span"
+  },
+  "instructions": "Google Flights is a single-page app. Always wait 2-3 seconds after filling each field for autocomplete to appear. Click suggestions from dropdown. Use aria-labels for buttons. Wait for results to load (look for price elements)."
+}

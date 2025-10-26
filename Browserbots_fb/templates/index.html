@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flyo - Smart E-commerce Assistant</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #1f1f1f, #111111);
+      color: #cfd8dc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-section {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1f1f1f;
+      border-bottom: 2px solid #ff4081;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #ff4081;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      color: #b0bec5;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .container {
+      flex-grow: 1;
+      max-width: 1200px;
+      width: 95%;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #chat-window {
+      background: #252525;
+      border-radius: 12px;
+      padding: 20px;
+      min-height: 400px;
+      max-height: 600px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .message-row {
+      display: flex;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .user-message-row {
+      justify-content: flex-end;
+    }
+
+    .bot-message-row {
+      justify-content: flex-start;
+    }
+
+    .message-bubble {
+      max-width: 80%;
+      padding: 15px 20px;
+      border-radius: 15px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .user-message-row .message-bubble {
+      background-color: #ff4081;
+      color: white;
+      border-radius: 15px 15px 5px 15px;
+    }
+
+    .bot-message-row .message-bubble {
+      background-color: #2e2e2e;
+      color: #cfd8dc;
+      border-radius: 15px 15px 15px 5px;
+    }
+
+    .bot-message-row .message-bubble strong {
+      color: #ffeb3b;
+      font-weight: bold;
+    }
+
+    .bot-message-row .message-bubble a {
+      color: #ff4081;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .bot-message-row .message-bubble a:hover {
+      color: #ff6b9d;
+    }
+
+    .product-card {
+      background: #1e1e1e;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border-left: 3px solid #555;
+      transition: all 0.3s;
+    }
+
+    .product-card:hover {
+      border-left-color: #ff4081;
+      background: #252525;
+    }
+
+    .product-card.selected {
+      border-left-color: #4caf50;
+      background: #1a2e1a;
+    }
+
+    .select-btn {
+      background: #ff4081;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: all 0.3s;
+    }
+
+    .select-btn:hover {
+      background: #e91e63;
+      transform: translateY(-2px);
+    }
+
+    .select-btn:disabled {
+      background: #555;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .checkout-btn {
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 15px;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .checkout-btn:hover {
+      background: #45a049;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+    }
+
+    .loading-bubble {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .loading-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .loading-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #ff4081;
+      animation: bounce 1.4s infinite ease-in-out both;
+    }
+
+    .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+    .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+    @keyframes bounce {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1); }
+    }
+
+    .input-section {
+      background: #252525;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .input-panel {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .input-panel input {
+      flex-grow: 1;
+      padding: 15px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background-color: #1e1e1e;
+      color: #cfd8dc;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .input-panel input:focus {
+      border-color: #ff4081;
+    }
+
+    .input-panel button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      background-color: #ff4081;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .input-panel button:hover {
+      background-color: #e91e63;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 64, 129, 0.4);
+    }
+
+    .input-panel button:disabled {
+      background-color: #555;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .examples-section {
+      margin-top: 15px;
+    }
+
+    .examples-label {
+      color: #b0bec5;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .examples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+    }
+
+    .example-btn {
+      padding: 12px 16px;
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      color: #cfd8dc;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .example-btn:hover {
+      background: #2e2e2e;
+      border-color: #ff4081;
+      transform: translateY(-2px);
+    }
+
+    #chat-window::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    #chat-window::-webkit-scrollbar-track {
+      background: #1e1e1e;
+      border-radius: 4px;
+    }
+
+    #chat-window::-webkit-scrollbar-thumb {
+      background: #ff4081;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .container { width: 100%; margin: 15px auto; padding: 0 10px; }
+      .input-panel { flex-direction: column; }
+      .input-panel button { width: 100%; }
+      .examples-grid { grid-template-columns: 1fr; }
+      .message-bubble { max-width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <h1>🛒 Flyo - Smart E-commerce Assistant</h1>
+    <p class="subtitle">
+      Search products, compare prices, select your favorite, and automate checkout!
+    </p>
+  </div>
+
+  <div class="container">
+    <div id="chat-window"></div>
+
+    <div class="input-section">
+      <div class="input-panel">
+        <input 
+          id="command-input" 
+          placeholder="E.g., Find the cheapest Samsung phone" 
+          onkeydown="if(event.key === 'Enter' && !event.shiftKey) sendCommand()"
+        />
+        <button id="submit-btn" onclick="sendCommand()">Search Products</button>
+      </div>
+
+      <div class="examples-section">
+        <div class="examples-label">Examples:</div>
+        <div class="examples-grid">
+          <button class="example-btn" onclick="useExample(this)">Find the cheapest running shoes</button>
+          <button class="example-btn" onclick="useExample(this)">Wireless mouse under 1000</button>
+          <button class="example-btn" onclick="useExample(this)">Samsung Galaxy phone</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CHAT_WINDOW = document.getElementById("chat-window");
+    const COMMAND_INPUT = document.getElementById("command-input");
+    const SUBMIT_BTN = document.getElementById("submit-btn");
+    
+    let currentItems = [];
+    let selectedItemIndex = null;
+
+    window.addEventListener('DOMContentLoaded', function() {
+      addMessage("Hello! I'm Flyo 🎯\n\n1️⃣ Search for products\n2️⃣ Select your favorite item\n3️⃣ I'll add to cart and take you to checkout!\n\nTry: \"Find the cheapest laptop\"", false);
+    });
+
+    function scrollChat() {
+      CHAT_WINDOW.scrollTop = CHAT_WINDOW.scrollHeight;
+    }
+
+    function selectItem(index) {
+      selectedItemIndex = index;
+      
+      document.querySelectorAll('.product-card').forEach((card, idx) => {
+        if (idx === index) {
+          card.classList.add('selected');
+          card.querySelector('.select-btn').textContent = '✓ Selected';
+          card.querySelector('.select-btn').disabled = true;
+        } else {
+          card.classList.remove('selected');
+          card.querySelector('.select-btn').textContent = 'Select This';
+          card.querySelector('.select-btn').disabled = false;
+        }
+      });
+      
+      document.getElementById('checkout-action-btn').style.display = 'block';
+    }
+
+    async function proceedToCheckout() {
+      if (selectedItemIndex === null) {
+        addMessage("Please select an item first!", false);
+        return;
+      }
+
+      const selectedItem = currentItems[selectedItemIndex];
+      addMessage("Processing: " + selectedItem.name, true);
+      
+      const loadingRow = addLoadingMessage("Adding to cart and proceeding to checkout...");
+      
+      COMMAND_INPUT.disabled = true;
+      SUBMIT_BTN.disabled = true;
+      document.getElementById('checkout-action-btn').disabled = true;
+
+      try {
+        const res = await fetch("/checkout", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({item: selectedItem})
+        });
+
+        CHAT_WINDOW.removeChild(loadingRow);
+        const data = await res.json();
+        
+        if (data.success) {
+          let msg = "✅ Success!\n\n";
+          msg += "✓ Added to cart\n";
+          if (data.reached_checkout) {
+            msg += "✓ Reached checkout page\n\n";
+            msg += "Please complete the payment manually in the browser window.";
+          } else {
+            msg += "⚠️ Stopped at cart page\n\n";
+            msg += "Please proceed to checkout manually.";
+          }
+          addMessage(msg, false);
+        } else {
+          addMessage("❌ Error: " + (data.error || "Failed to process checkout"), false);
+        }
+
+      } catch (error) {
+        CHAT_WINDOW.removeChild(loadingRow);
+        addMessage("❌ Connection Error: " + error.message, false);
+      } finally {
+        COMMAND_INPUT.disabled = false;
+        SUBMIT_BTN.disabled = false;
+        document.getElementById('checkout-action-btn').disabled = false;
+      }
+    }
+
+    function formatItemsToHTML(items) {
+      if (!items || items.length === 0) {
+        return "❌ No items found.";
+      }
+
+      currentItems = items;
+      selectedItemIndex = null;
+
+      let html = "<div style='line-height: 1.8;'>";
+      html += "<strong style='font-size: 1.1em; color: #4caf50;'>🎯 Found " + items.length + " Products!</strong><br><br>";
+      html += "<strong>Select an item to proceed to checkout:</strong><br><br>";
+      
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        const price = item.price !== Infinity ? "₹" + item.price.toFixed(2) : 'N/A';
+        
+        html += "<div class='product-card' id='product-" + i + "'>";
+        html += "<strong>" + (i + 1) + ". " + item.name + "</strong><br>";
+        html += "💰 Price: <span style='color: #4caf50; font-size: 1.1em; font-weight: bold;'>" + price + "</span><br>";
+        html += "🏪 Website: " + item.website + "<br>";
+        html += "🔗 <a href='" + item.link + "' target='_blank'>View Product</a><br>";
+        html += "<button class='select-btn' onclick='selectItem(" + i + ")'>Select This</button>";
+        html += "</div>";
+      }
+
+      html += "<button id='checkout-action-btn' class='checkout-btn' onclick='proceedToCheckout()' style='display:none;'>🛒 Proceed to Checkout</button>";
+      html += "</div>";
+      return html;
+    }
+
+    function addMessage(content, isUser, isHTML) {
+      const row = document.createElement("div");
+      row.className = isUser ? "message-row user-message-row" : "message-row bot-message-row";
+      
+      const bubble = document.createElement("div");
+      bubble.className = "message-bubble";
+      
+      if (isHTML) {
+        bubble.innerHTML = content;
+      } else {
+        bubble.textContent = content;
+      }
+      
+      row.appendChild(bubble);
+      CHAT_WINDOW.appendChild(row);
+      scrollChat();
+      return row;
+    }
+
+    function addLoadingMessage(text) {
+      const row = document.createElement("div");
+      row.className = "message-row bot-message-row";
+      
+      const bubble = document.createElement("div");
+      bubble.className = "message-bubble loading-bubble";
+      bubble.innerHTML = text + "<div class='loading-dots'><span></span><span></span><span></span></div>";
+      
+      row.appendChild(bubble);
+      CHAT_WINDOW.appendChild(row);
+      scrollChat();
+      return row;
+    }
+
+    function useExample(btn) {
+      COMMAND_INPUT.value = btn.textContent;
+      COMMAND_INPUT.focus();
+    }
+
+    async function sendCommand() {
+      const command = COMMAND_INPUT.value.trim();
+      if (!command) return;
+
+      COMMAND_INPUT.disabled = true;
+      SUBMIT_BTN.disabled = true;
+
+      addMessage(command, true, false);
+      COMMAND_INPUT.value = "";
+
+      const loadingRow = addLoadingMessage("Searching products...");
+
+      try {
+        const res = await fetch("/run", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({command: command})
+        });
+
+        CHAT_WINDOW.removeChild(loadingRow);
+        const data = await res.json();
+        
+        if (data.error) {
+          addMessage("❌ Error: " + data.error, false, false);
+        } else if (data.all_items && data.all_items.length > 0) {
+          const resultHTML = formatItemsToHTML(data.all_items);
+          addMessage(resultHTML, false, true);
+        } else {
+          addMessage("⚠️ No products found. Try a different search.", false, false);
+        }
+
+      } catch (error) {
+        CHAT_WINDOW.removeChild(loadingRow);
+        addMessage("❌ Connection Error: " + error.message, false, false);
+      } finally {
+        COMMAND_INPUT.disabled = false;
+        SUBMIT_BTN.disabled = false;
+        COMMAND_INPUT.focus();
+      }
+    }
+  </script>
+</body>
+</html>

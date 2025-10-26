@@ -1,0 +1,657 @@
+{
+  "https://duckduckgo.com": {
+    "hash": "727ffbe66b8b97166020f538e31afe013ecd52676e6224b87329ef5337b3d5ab",
+    "ui_text": "Title: Python web frameworks at DuckDuckGo\nURL: https://duckduckgo.com/?origin=funnel_home_website&t=h_&q=Python+web+frameworks&ia=web\n\nDuckDuckGo\n\nUpgrade to our browser.\n\nTry the\nDuckDuckGo Browser.\nFast. Free. Private.\n\nDownload Browser\n\nFree\n\nOpen menu\n All\nImages\nVideos\nNews\nMaps\nSearch Assist\n Duck.ai\nSearch Settings\nProtected\nIndia (en)\nSafe search: moderate\nAny time\n\nudemy.com\n\nReport Ad\n\nUdemy\n\nhttps://udemy.com\n\nLearn Python - Python Programming with Python\u00a0AD\nLearn Python online at your own pace. Start today and improve your skills. Join millions of learners from around the world already learning on Udemy.\n\nBrowse Free Courses\n\nFree courses to achieve your goals Learn new skills, on us\n\nOnline Courses\n\nLearn Anything, On Your Schedule.-Browse Online Courses...\n\nBrowse All Courses\n\nSee our catalog of 210k+ courses Learn anything, on your schedule\n\nChatGPT Courses\n\nMaximize productivity with ChatGPT Work smarter with ChatGPT today\n\nSearch Assist\n\nPython web frameworks are tools that help developers build web applications more easily and efficiently. Popular frameworks include Django, Flask, and FastAPI, each offering different features and levels of complexity to suit various project needs.\n GitHub blog.jetbrains.com\n\nMore\n\nAuto-generated based on listed sources. May contain inaccuracies.\n\nWas this helpful?\n\ndev.to\n\nOnly include results for this site\nRedo search without this site\nBlock this site from all results\nNEW\nShare feedback about this site\n\nDEV Community\n\nhttps://dev.to\u00a0\u203a\u00a0leapcell \u203a top-10-python-web-frameworks-compared-3o82\n\n2025's Top 10 Python Web Frameworks Compared - DEV Community\nSimple Summary of the Above Frameworks: Comprehensive: Django Small and Elegant: Flask, sanic, bottle Asynchronous and High - Concurrency Support: fastapi, tornado, sanic, aiohttp Front - Backend Separation (API Development): fastapi, django - rest - framework, falcon, hug Django Django is an open - source full - stack web framework written in Python. It's powerful, flexible and easy - to ...\n\ngeeksforgeeks.org\n\nOnly include results for this site\nRedo search without this site\nBlock this site from all results\nNEW\nShare feedback about this site\n\nGeeksForGeeks\n\nhttps://www.geeksforgeeks.org\u00a0\u203a\u00a0blogs \u203a best-python-frameworks\n\nTop 10 Python Frameworks [2025 Updated] - GeeksforGeeks\nA Python framework is essentially a set of tools and libraries that help you build web applications, websites, or software by providing pre-written code and structure.\n\nwiki.python.org\n\nOnly include results for this site\nRedo search without this site\nBlock this site from all results\nNEW\nShare feedback about this site\n\nPython Software Foundation Wiki\n\nhttps://wiki.python.org\u00a0\u203a\u00a0moin \u203a WebFrameworks\n\nWebFrameworks - Python Wiki\n1. Web Frameworks for Python A Web framework is a collection of packages or modules which allow developers to write Web applications (see WebApplications) or services without having to handle such low-level details as protocols, sockets or process/thread management. The majority of Web frameworks are exclusively server-side technology, although, with the increased prevalence of AJAX, some Web ...\n\ngithub.com\n\nOnly include results for this site\nRedo search without this site\nBlock this site from all results\nNEW\nShare feedback about this site\n\nGithub\n\nhttps://github.com\u00a0\u203a\u00a0sfermigier \u203a awesome-python-web-frameworks\n\nAwesome Python Web Frameworks - GitHub\nFlask \u260570610 - a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. Awesome Flask \u26051652 Pyramid \u26054054 - a small, fast, down-to-earth, open source Python web framework. It makes real-world web ...\n\neluminoustechnologies.com\n\nOnly include results for this site\nRedo search without this site\nBlock this site from all results\nNEW\nShare feedback about this site\n\neluminoustechnologies.com\n\nhttps://eluminoustechnologies.com\u00a0\u203a\u00a0blog \u203a python-web-frameworks\n\n7 Best Python Web Frameworks in 2025 Every Dev Team Needs\nFrom Django to FastAPI, uncover the top Python web frameworks that power secure and scalable apps. Our blog covers all the crucial details.\n\nbrowserstack.com\n\nOnly include results for this site\nRedo search without this site\nBlock this site from all results\nNEW\nShare feedback about this site\n\nBrowserStack\n\nhttps://www.browserstack.com\u00a0\u203a\u00a0guide \u203a top-python-web-development-frameworks\n\nTop 10 Python Web Development Frameworks in 2025\nLearn about the most popular and versatile Python web frameworks for creating web applications, APIs, and websites. Compare their features, advantages, and limitations, and see examples of projects built with each framework.\n\nblog.jetbrains.com\n\nOnly include results for this site\nRedo search without this site\nBlock this site from all results\nNEW\nShare feedback about this site\n\nThe JetBrains Blog\n\nhttps://blog.jetbrains.com\u00a0\u203a\u00a0pycharm \u203a 2025 \u203a 02 \u203a django-flask-fastapi\n\nWhich Is the Best Python Web Framework: Django, Flask, or FastAPI?\nRead this blo",
+    "selectors": {
+      "inputs": [
+        "#state_hidden",
+        "#search_form_input",
+        "input[name=\"t\"]"
+      ],
+      "buttons": [
+        "#header-hamburger-menu-btn",
+        "button:has-text(\"Search Settings\")",
+        "button:has-text(\"Search Assist\")",
+        "button:has-text(\"More\")",
+        "#more-results",
+        "button:has-text(\"Close menu\")",
+        "button:has-text(\"Share Feedback\")"
+      ],
+      "links": [
+        {
+          "text": "DuckDuckGo",
+          "href": "https://duckduckgo.com/?t=h_"
+        },
+        {
+          "text": "Download Browser",
+          "href": "https://duckduckgo.com/windows?origin=funnel_browser_searchresults__popover"
+        },
+        {
+          "text": "All",
+          "href": "https://duckduckgo.com/?origin=funnel_home_website&t=h_&q=Python+web+frameworks&ia=web"
+        },
+        {
+          "text": "Images",
+          "href": "https://duckduckgo.com/?origin=funnel_home_website&t=h_&q=Python+web+frameworks&ia=images&iax=images"
+        },
+        {
+          "text": "Videos",
+          "href": "https://duckduckgo.com/?origin=funnel_home_website&t=h_&q=Python+web+frameworks&ia=videos&iax=videos"
+        },
+        {
+          "text": "News",
+          "href": "https://duckduckgo.com/?origin=funnel_home_website&t=h_&q=Python+web+frameworks&ia=news&iar=news"
+        },
+        {
+          "text": "Maps",
+          "href": "https://duckduckgo.com/?origin=funnel_home_website&t=h_&q=Python+web+frameworks&iaxm=maps"
+        },
+        {
+          "text": "Search Assist",
+          "href": "https://duckduckgo.com/?origin=funnel_home_website&t=h_&q=Python+web+frameworks&ia=web&assist=true"
+        },
+        {
+          "text": "Duck.ai",
+          "href": "https://duckduckgo.com/?origin=funnel_home_website&t=h_&q=Python+web+frameworks&ia=chat"
+        },
+        {
+          "text": "Learn More",
+          "href": "https://duckduckgo.com/duckduckgo-help-pages/search-privacy/"
+        }
+      ],
+      "forms": []
+    },
+    "timestamp": "2025-10-25T22:01:17.304176",
+    "hit_count": 0,
+    "last_hit": null
+  },
+  "https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19": {
+    "hash": "debfc3913aca1233e4c7ba1ee30aa208dc077d309870d1f93caa3eb6d838e80c",
+    "ui_text": "Title: Amazon.in: Buy amazon basics Wireless Optical Mouse with 2.4GHz, USB Nano Dongle, Optical Orientation, Click Wheel, Adjustable DPI Online at Low Prices in India | amazon basics Reviews &amp; Ratings\nURL: https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19?dib=eyJ2IjoiMSJ9.O5lzTtJLZWs_iztG9l6vYaFqcycR74bcdwr1feJZKI6X8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwcfdup4f6kIP4gJPiHu_qb4gfis4gDwF2a_D_RGRj-KhPco4hnKKbKyj3B1j3_KQLW_5Nwc1pCU3qadCDXX3LtCckktxkpzi1osAG6eWnoMmUtZLS7yF7wsKtY4HWGWdd_yDckwYsmADv9ClDn0tjy8.0eInwRG3pxc0qBE_pjzgJds4f6z-QLKezaVtH8MsnXs&dib_tag=se&keywords=wireless+mouse&qid=1761410012&sr=8-19\n\nSkip to\nMain content\nAbout this item\nBuying options\nReviews\nKeyboard shortcuts\nSearch\nalt\n+\n/\nCart\nshift\n+\nalt\n+\nC\nHome\nshift\n+\nalt\n+\nH\nOrders\nshift\n+\nalt\n+\nO\nAdd to cart\nshift\n+\nalt\n+\nK\nShow/Hide shortcuts\nshift\n+\nalt\n+\nZ\nTo move between items, use your keyboard's up or down arrows.\n.in\nDelivering to Bengaluru 562130\nUpdate location\nAll\nAll Categories\nAlexa Skills\nAmazon Devices\nAmazon Fashion\nAmazon Fresh\nAmazon Pharmacy\nAppliances\nApps & Games\nAudible Audiobooks\nBaby\nBeauty\nBooks\nCar & Motorbike\nClothing & Accessories\nCollectibles\nComputers & Accessories\nDeals\nElectronics\nFurniture\nGarden & Outdoors\nGift Cards\nGrocery & Gourmet Foods\nHealth & Personal Care\nHome & Kitchen\nIndustrial & Scientific\nJewellery\nKindle Store\nLuggage & Bags\nLuxury Beauty\nMovies & TV Shows\nMP3 Music\nMusic\nMusical Instruments\nOffice Products\nPet Supplies\nPrime Video\nShoes & Handbags\nSoftware\nSports, Fitness & Outdoors\nSubscribe & Save\nTools & Home Improvement\nToys & Games\nUnder \u20b9500\nVideo Games\nWatches\nEN\nHello, sign in\nAccount & Lists\nReturns\n& Orders\n0\nCart\nAll\nFresh\nMX Player\nSell\nBestsellers\nToday's Deals\nMobiles\nNew Releases\nElectronics\nCustomer Service\nHome & Kitchen\nPrime\nFashion\nAmazon Pay\nBooks\nComputers\nHome Improvement\nBeauty & Personal Care\nCar & Motorbike\nToys & Games\nGift Cards\nSports, Fitness & Outdoors\nVideo Games\nGrocery & Gourmet Foods\nCustom Products\nHealth, Household & Personal Care\nAmazonBasics\nBaby\nAudible\nPet Supplies\nSubscribe & Save\nGift Ideas\nFlights\nMobiles & Accessories\nLaptops & Accessories\nTV & Home Entertainment\nAudio\nCameras\nComputer Peripherals\nSmart Technology\nMusical Instruments\nOffice & Stationery\nSponsored \nComputers & Accessories\n\u203a\nAccessories & Peripherals\n\u203a\nKeyboards, Mice & Input Devices\n\u203a\nMice\n\u20b9226.00\n\u20b9226\n.\n00\nFulfilled\nFREE delivery Monday, 27 October on your first order. Details\nOr fastest delivery Tomorrow, 26 October. Order within 1 hr 31 mins. Details\nDelivering to Bengaluru 562130 - Update location\nIn stock\n\nShips from\nAmazon\nSold by\nClicktech Retail Private Ltd\nPackaging\nShips in product packaging\nPayment\nSecure transaction\nQuantity:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\nQuantity:1\nAdd to Cart\nBuy Now\nAdd gift options\nAdd to Wish List\nSponsored \nClick to see full view\namazon basics Wireless Optical Mouse with 2.4GHz, USB Nano Dongle, Optical Orientation, Click Wheel, Adjustable DPI\nVisit the amazon basics Store\n3.6 \n3.6 out of 5 stars\n    347 ratings\n500+ bought in past month\n\u20b9226.00 with 62 percent savings\n-62% \n\u20b9226\nM.R.P.: \u20b9599.00\nM.R.P.: \n\u20b9599\n\u20b9599\nFulfilled\nInclusive of all taxes\n \nOffers\nCashback\nUpto \u20b96.00 cashback as Amazon Pay Balance when you pay with Amazon Pay ICICI Bank Credit Cards\nUpto \u20b96.00 cashback as Amazon Pay Balance when you\u2026\n1 offer\nBank Offer\nUpto \u20b91,000.00 discount on select Credit Cards, Debit Cards\nUpto \u20b91,000.00 discount on select Credit Cards, Debit\u2026\n18 offers\nPartner Offers\nGet GST invoice and save up to 18% on business purchases. Sign up for free\nGet GST invoice and save up to 18% on business purchases.\n1 offer\nNext page\n10 days Service Centre Replacement\nFree Delivery\n1 Year Warranty\nPay on Delivery\nTop Brand\nNext page\nBrand\tamazon basics\nColour\tBlack\nConnectivity Technology\tUSB\nSpecial Feature\tWireless\nMovement Detection Technology\tOptical\nAbout this item\nThe 2.4 GHz operating speed of this wireless mouse sends quick signals to the device.\nIt has a compact design, making it convenient to carry.\nDesigned to keep either hand comfortable.\nComes with adjustable DPI resolution.\nIt has an easy plug-and-play mechanism.\n\u203a See more product details\n \u00a0 Report an issue with this product\nBuy this product as Renewed and save \u20b980.00 from the regular price.\n(Refurbished) amazon basics Wireless Optical Mouse with 2.4GHz, USB Nano Dongle, Optical Orientation, Click Wheel, Adjustable DPI\n\u20b9146.00 FREE Delivery on first order. Details\n (11)\nMinimal to no signs of wear and tear, backed by a 6 month warranty\n\nSponsored \n\nTop Brand\n\namazon basics\n\n88% positive ratings from 100K+ customers\n\n100K+ recent orders from this brand\n\n12+ years on Amazon\n\nFrequently bought together\nThis item: amazon basics Wireless Optical Mouse with 2.4GHz, USB Nano Dongle, Optical Orientation, Click Wheel, Adjustable DPI\n\u20b9226.00\n\u20b9226\n.\n00\n+\namazon basics Wired Mouse | 1000 DPI Optical Sensor | Plug and Play ",
+    "selectors": {
+      "inputs": [
+        "#unifiedLocation1ClickAddress",
+        "#ubbShipTo",
+        "#glowValidationToken",
+        "#glowDestinationType",
+        "#twotabsearchtextbox",
+        "#nav-search-submit-button",
+        "#desktop-atc-anti-csrf-token",
+        "#items[0.base][customerVisiblePrice][amount]",
+        "#items[0.base][customerVisiblePrice][currencyCode]",
+        "#items[0.base][customerVisiblePrice][displayString]",
+        "input[name=\"items[0.base][asin]\"]",
+        "input[name=\"clientName\"]",
+        "input[name=\"items[0.base][offerListingId]\"]",
+        "input[name=\"pageLoadTimestampUTC\"]",
+        "#offerListingID",
+        "#session-id",
+        "#ASIN",
+        "#isMerchantExclusive",
+        "#merchantID",
+        "#isAddon",
+        "#nodeID",
+        "#sellingCustomerID",
+        "#qid",
+        "#sr",
+        "#storeID",
+        "#tagActionCode",
+        "#viewID",
+        "#rebateId",
+        "#ctaDeviceType",
+        "#ctaPageType",
+        "#usePrimeHandler",
+        "#smokeTestEnabled",
+        "#rsid",
+        "#sourceCustomerOrgListID",
+        "#sourceCustomerOrgListItemID",
+        "input[name=\"wlPopCommand\"]",
+        "#all-offers-display-reload-param",
+        "#all-offers-display-params",
+        "input[name=\"items[0.base][quantity]\"]",
+        "#twister-plus-price-data-price",
+        "#twister-plus-price-data-savings",
+        "#twister-plus-price-data-price-unit",
+        "#add-to-cart-button",
+        "#buy-now-button",
+        "input[name=\"pipelineType\"]",
+        "input[name=\"referrer\"]",
+        "input[name=\"isBuyNow\"]",
+        "input[name=\"isEligibilityLogicDisabled\"]",
+        "input[name=\"ref_\"]",
+        "#gift-wrap",
+        "#lists-sp-csrf-form-token",
+        "#creator-sp-csrf-form-token",
+        "#cartAddressNew",
+        "#cartAddressUsed",
+        "#all-offers-display-reload-param",
+        "#all-offers-display-params",
+        "#all-offers-display-reload-param",
+        "#all-offers-display-params",
+        "#twister-plus-active-cards",
+        "#twister-plus-checkbox",
+        "#twister-plus-device-type",
+        "#twister-plus-eligible",
+        "#ccCardsRendered",
+        "#twister-plus-asin",
+        "#twister-plus-offer-listing-id",
+        "#fbtCheck-1",
+        "#fbtCheck-2",
+        "#fbtCheck-3",
+        "input[name=\"session-id\"]",
+        "input[name=\"anti-csrftoken-a2z\"]",
+        "input[name=\"clientName\"]",
+        "input[name=\"isNeoAddToCart\"]",
+        "input[name=\"customizers\"]",
+        "input[name=\"items[0.base][asin]\"]",
+        "input[name=\"items[0.base][offerListingId]\"]",
+        "input[name=\"items[0.base][quantity]\"]",
+        "input[name=\"items[1.base][asin]\"]",
+        "input[name=\"items[1.base][offerListingId]\"]",
+        "input[name=\"items[1.base][quantity]\"]",
+        "input[name=\"items[2.base][asin]\"]",
+        "input[name=\"items[2.base][offerListingId]\"]",
+        "input[name=\"items[2.base][quantity]\"]",
+        "input[name=\"submit.addToCart\"]",
+        "#aapiCsrfToken",
+        "#isStateRequired",
+        "#isStoreRequired",
+        "#aapiEndpoint",
+        "#modalHeader",
+        "#productCategory",
+        "#productImageUrl",
+        "#priceSymbol",
+        "#priceValue",
+        "#productTitle",
+        "#currencyOfPreference",
+        "#absoluteUrlPrefix",
+        "#customerId",
+        "#isCustomerLoggedIn",
+        "#isCurrentGlOnlineOnly",
+        "#asin",
+        "#marketplaceId",
+        "#countryCode",
+        "#lowerPriceInfo",
+        "#lowerPriceWhere",
+        "#labelPermalink",
+        "#labelOnline",
+        "#labelOffline",
+        "#lowerPriceSignIn",
+        "#labelStoreName",
+        "#addressCity",
+        "#addressState",
+        "#selectProvince",
+        "#labelDateOfPrice",
+        "#labelUrl",
+        "#labelPrice",
+        "#labelShipping",
+        "#submitFeedback",
+        "#errorNoType",
+        "#errorBadPrice",
+        "#errorBadPriceShipping",
+        "#errorInvalidUrl",
+        "#errorSubmission",
+        "#errorEmptyFields",
+        "#errorMissingCity",
+        "#thankFeedback",
+        "#errorEmptyUrl",
+        "#offlineStoresList",
+        "#statesList",
+        "#pricingFeedback_onlineRadio",
+        "#onlineUrl",
+        "#onlinePriceRaw",
+        "#onlineShippingRaw",
+        "#pricingFeedback_offlineRadio",
+        "#offlineCity",
+        "#offlinePriceRaw",
+        "input[name=\"pfw_submit\"]",
+        "input[name=\"ue_back\"]",
+        "#lists-createlist-createAndAddAsin"
+      ],
+      "buttons": [
+        "#nav-assist-add-to-cart",
+        "#nav-assist-show-shortcuts",
+        "#nav-search-submit-button",
+        "#add-to-cart-button",
+        "#buy-now-button",
+        "#close-button-0",
+        "#close-button-1",
+        "#close-button-2",
+        "#close-button-3",
+        "#close-button-4",
+        "#close-button-5",
+        "#close-button-6",
+        "#close-button-7",
+        "button:has-text(\"All photos\")",
+        "button:has-text(\"Close\")",
+        "button:has-text(\"Close\")",
+        "button:has-text(\"Try again\")"
+      ],
+      "links": [
+        {
+          "text": "Main content",
+          "href": "https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19?dib=eyJ2IjoiMSJ9.O5lzTtJLZWs_iztG9l6vYaFqcycR74bcdwr1feJZKI6X8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwcfdup4f6kIP4gJPiHu_qb4gfis4gDwF2a_D_RGRj-KhPco4hnKKbKyj3B1j3_KQLW_5Nwc1pCU3qadCDXX3LtCckktxkpzi1osAG6eWnoMmUtZLS7yF7wsKtY4HWGWdd_yDckwYsmADv9ClDn0tjy8.0eInwRG3pxc0qBE_pjzgJds4f6z-QLKezaVtH8MsnXs&dib_tag=se&keywords=wireless+mouse&qid=1761410012&sr=8-19#skippedLink"
+        },
+        {
+          "text": "About this item",
+          "href": "https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19?dib=eyJ2IjoiMSJ9.O5lzTtJLZWs_iztG9l6vYaFqcycR74bcdwr1feJZKI6X8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwcfdup4f6kIP4gJPiHu_qb4gfis4gDwF2a_D_RGRj-KhPco4hnKKbKyj3B1j3_KQLW_5Nwc1pCU3qadCDXX3LtCckktxkpzi1osAG6eWnoMmUtZLS7yF7wsKtY4HWGWdd_yDckwYsmADv9ClDn0tjy8.0eInwRG3pxc0qBE_pjzgJds4f6z-QLKezaVtH8MsnXs&dib_tag=se&keywords=wireless+mouse&qid=1761410012&sr=8-19#featurebullets_feature_div"
+        },
+        {
+          "text": "About this item",
+          "href": "https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19?dib=eyJ2IjoiMSJ9.O5lzTtJLZWs_iztG9l6vYaFqcycR74bcdwr1feJZKI6X8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwcfdup4f6kIP4gJPiHu_qb4gfis4gDwF2a_D_RGRj-KhPco4hnKKbKyj3B1j3_KQLW_5Nwc1pCU3qadCDXX3LtCckktxkpzi1osAG6eWnoMmUtZLS7yF7wsKtY4HWGWdd_yDckwYsmADv9ClDn0tjy8.0eInwRG3pxc0qBE_pjzgJds4f6z-QLKezaVtH8MsnXs&dib_tag=se&keywords=wireless+mouse&qid=1761410012&sr=8-19#nic-po-expander-heading"
+        },
+        {
+          "text": "About this item",
+          "href": "https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19?dib=eyJ2IjoiMSJ9.O5lzTtJLZWs_iztG9l6vYaFqcycR74bcdwr1feJZKI6X8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwcfdup4f6kIP4gJPiHu_qb4gfis4gDwF2a_D_RGRj-KhPco4hnKKbKyj3B1j3_KQLW_5Nwc1pCU3qadCDXX3LtCckktxkpzi1osAG6eWnoMmUtZLS7yF7wsKtY4HWGWdd_yDckwYsmADv9ClDn0tjy8.0eInwRG3pxc0qBE_pjzgJds4f6z-QLKezaVtH8MsnXs&dib_tag=se&keywords=wireless+mouse&qid=1761410012&sr=8-19#productFactsDesktopExpander"
+        },
+        {
+          "text": "Buying options",
+          "href": "https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19?dib=eyJ2IjoiMSJ9.O5lzTtJLZWs_iztG9l6vYaFqcycR74bcdwr1feJZKI6X8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwcfdup4f6kIP4gJPiHu_qb4gfis4gDwF2a_D_RGRj-KhPco4hnKKbKyj3B1j3_KQLW_5Nwc1pCU3qadCDXX3LtCckktxkpzi1osAG6eWnoMmUtZLS7yF7wsKtY4HWGWdd_yDckwYsmADv9ClDn0tjy8.0eInwRG3pxc0qBE_pjzgJds4f6z-QLKezaVtH8MsnXs&dib_tag=se&keywords=wireless+mouse&qid=1761410012&sr=8-19#buybox"
+        },
+        {
+          "text": "Compare with similar items",
+          "href": "https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19?dib=eyJ2IjoiMSJ9.O5lzTtJLZWs_iztG9l6vYaFqcycR74bcdwr1feJZKI6X8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwcfdup4f6kIP4gJPiHu_qb4gfis4gDwF2a_D_RGRj-KhPco4hnKKbKyj3B1j3_KQLW_5Nwc1pCU3qadCDXX3LtCckktxkpzi1osAG6eWnoMmUtZLS7yF7wsKtY4HWGWdd_yDckwYsmADv9ClDn0tjy8.0eInwRG3pxc0qBE_pjzgJds4f6z-QLKezaVtH8MsnXs&dib_tag=se&keywords=wireless+mouse&qid=1761410012&sr=8-19#product-comparison_feature_div"
+        },
+        {
+          "text": "Videos",
+          "href": "https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19?dib=eyJ2IjoiMSJ9.O5lzTtJLZWs_iztG9l6vYaFqcycR74bcdwr1feJZKI6X8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwcfdup4f6kIP4gJPiHu_qb4gfis4gDwF2a_D_RGRj-KhPco4hnKKbKyj3B1j3_KQLW_5Nwc1pCU3qadCDXX3LtCckktxkpzi1osAG6eWnoMmUtZLS7yF7wsKtY4HWGWdd_yDckwYsmADv9ClDn0tjy8.0eInwRG3pxc0qBE_pjzgJds4f6z-QLKezaVtH8MsnXs&dib_tag=se&keywords=wireless+mouse&qid=1761410012&sr=8-19#va-related-videos-widget_feature_div"
+        },
+        {
+          "text": "Reviews",
+          "href": "https://www.amazon.in/amazon-basics-Wireless-Orientation-Adjustable/dp/B0DWSTJG8G/ref=sr_1_19?dib=eyJ2IjoiMSJ9.O5lzTtJLZWs_iztG9l6vYaFqcycR74bcdwr1feJZKI6X8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwcfdup4f6kIP4gJPiHu_qb4gfis4gDwF2a_D_RGRj-KhPco4hnKKbKyj3B1j3_KQLW_5Nwc1pCU3qadCDXX3LtCckktxkpzi1osAG6eWnoMmUtZLS7yF7wsKtY4HWGWdd_yDckwYsmADv9ClDn0tjy8.0eInwRG3pxc0qBE_pjzgJds4f6z-QLKezaVtH8MsnXs&dib_tag=se&keywords=wireless+mouse&qid=1761410012&sr=8-19#customerReviews"
+        },
+        {
+          "text": "Search\n          \n              alt\n              +\n              /",
+          "href": "javascript:void(0)"
+        },
+        {
+          "text": "Cart\n          \n              shift\n              +\n              alt\n              +\n              C",
+          "href": "javascript:void(0)"
+        }
+      ],
+      "forms": []
+    },
+    "timestamp": "2025-10-25T22:03:52.960381",
+    "hit_count": 0,
+    "last_hit": null
+  },
+  "https://example.com": {
+    "hash": "13f5e50297bde87abbf51cd1cd43678109b1a72a52c1cefa3b56844464e4f25c",
+    "ui_text": "Title: Example Domain\nURL: https://example.com/\n\nExample Domain\n\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n\nLearn more",
+    "selectors": {
+      "inputs": [],
+      "buttons": [],
+      "links": [
+        {
+          "text": "Learn more",
+          "href": "https://iana.org/domains/example"
+        }
+      ],
+      "forms": []
+    },
+    "timestamp": "2025-10-25T22:05:33.217740",
+    "hit_count": 0,
+    "last_hit": null
+  },
+  "about:blank": {
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "analysis": {
+      "ui_text": "\n=== PAGE ANALYSIS ===\nTitle: \nURL: about:blank\n\n=== PAGE STATE ===\nHas Results/Products: False\nHas Cart: False\nHas Login Form: False\nHas Checkout: False\n\n=== HEADINGS ===\n  (none)\n\n=== FORMS ===\n  (none)\n\n=== INPUT FIELDS ===\n  (none)\n\n=== BUTTONS ===\n  (none)\n\n=== LINKS (Top 10) ===\n  (none)\n\n=== RESULT CONTAINERS (Potential product/item containers) ===\n  (none)\n\n=== VISIBLE TEXT (excerpt) ===\n\n\n=== SELECTOR RECOMMENDATIONS ===\nFor search input: input[type='search'], input[name*='search'], input[name='q'], input[placeholder*='Search'], input[type='text']\nFor submit button: button[type='submit'], input[type='submit']\nFor results: [class*='result'], [class*='product'], [class*='item'], article, [role='article']\nFor login: Username: input[type=email], input[name*=user], Password: input[type=password]\n",
+      "selectors": {
+        "inputs": [],
+        "buttons": [],
+        "links": [],
+        "containers": [],
+        "forms": []
+      },
+      "page_state": {
+        "has_results": false,
+        "has_cart": false,
+        "has_login": false,
+        "has_checkout": false
+      },
+      "url": "about:blank",
+      "title": "",
+      "cached": false
+    },
+    "timestamp": "2025-10-26T00:41:53.128432",
+    "hit_count": 0,
+    "last_hit": null
+  },
+  "https://www.amazon.in/s": {
+    "hash": "7b183301bb017ce82e71d5d63dd43da3aafcd6476d8014acceefaabcc28b75b8",
+    "analysis": {
+      "ui_text": "\n=== PAGE ANALYSIS ===\nTitle: Amazon.in : wireless mouse\nURL: https://www.amazon.in/s?k=wireless+mouse&ref=nb_sb_noss\n\n=== PAGE STATE ===\nHas Results/Products: True\nHas Cart: True\nHas Login Form: True\nHas Checkout: False\n\n=== HEADINGS ===\n  - Skip to\n  - Keyboard shortcuts\n  - 1-16 of over 2,000 results for \"wireless mouse\"\nSort by:\nFeatured\nPrice: Low to High\nPrice: High to Low\nAvg. Customer Review\nNewest Arrivals\nBest Sellers\nSort by:Featured\n  - 1-16 of over 2,000 results for \"wireless mouse\"\n  - Results\n\n=== FORMS ===\n  - Form ID: nav-search-bar-form, Action: https://www.amazon.in/s/ref=nb_sb_noss, Fields: 3\n  - Form ID: form-1, Action: https://www.amazon.in/s, Fields: 1\n  - Form ID: form-2, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_1_sspa&sr=8-1&qid=1761418954&discoveredAsins.0=B0DXNTYWHV, Fields: 0\n  - Form ID: form-3, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_2_sspa&sr=8-2&qid=1761418954&discoveredAsins.0=B07JPX9CR7, Fields: 0\n  - Form ID: form-4, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_3&sr=8-3&qid=1761418954&discoveredAsins.0=B0D18192T2, Fields: 0\n  - Form ID: form-5, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_4&sr=8-4&qid=1761418954&discoveredAsins.0=B0B296NTFV, Fields: 0\n  - Form ID: form-6, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_5&sr=8-5&qid=1761418954&discoveredAsins.0=B0CQRNWJM2, Fields: 0\n  - Form ID: form-7, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_1_sspa_w&sr=1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb&qid=1761418954&discoveredAsins.0=B0F4N5S49Z, Fields: 0\n  - Form ID: form-8, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_2_sspa_w&sr=1-2-66673dcf-083f-43ba-b782-d4a436cc5cfb&qid=1761418954&discoveredAsins.0=B0DWG7DWQJ, Fields: 0\n  - Form ID: form-9, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_3_sspa_w&sr=1-3-66673dcf-083f-43ba-b782-d4a436cc5cfb&qid=1761418954&discoveredAsins.0=B0DT6PGYG1, Fields: 0\n  - Form ID: form-10, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_4_sspa_w&sr=1-4-66673dcf-083f-43ba-b782-d4a436cc5cfb&qid=1761418954&discoveredAsins.0=B09KN1JX8H, Fields: 0\n  - Form ID: form-11, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_5_sspa_w&sr=1-5-66673dcf-083f-43ba-b782-d4a436cc5cfb&qid=1761418954&discoveredAsins.0=B07JPX9CR7, Fields: 0\n  - Form ID: form-12, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_6&sr=8-6&qid=1761418954&discoveredAsins.0=B0DDTL9PB6, Fields: 0\n  - Form ID: form-13, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_7&sr=8-7&qid=1761418954&discoveredAsins.0=B0BG8LZNYL, Fields: 0\n  - Form ID: form-14, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_8&sr=8-8&qid=1761418954&discoveredAsins.0=B0DXNTYWHV, Fields: 0\n  - Form ID: form-15, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_9&sr=8-9&qid=1761418954&discoveredAsins.0=B07JPX9CR7, Fields: 0\n  - Form ID: form-16, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_10&sr=8-10&qid=1761418954&discoveredAsins.0=B0CP9NSXYJ, Fields: 0\n  - Form ID: form-17, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_11_sspa&sr=8-11&qid=1761418954&discoveredAsins.0=B0F88GT83S, Fields: 0\n  - Form ID: form-18, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_12_sspa&sr=8-12&qid=1761418954&discoveredAsins.0=B07F2GC4S9, Fields: 0\n  - Form ID: form-19, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_13&sr=8-13&qid=1761418954&discoveredAsins.0=B0DGGWCJ37, Fields: 0\n  - Form ID: form-20, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_14&sr=8-14&qid=1761418954&discoveredAsins.0=B0FF4XBM5N, Fields: 0\n  - Form ID: form-21, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_15&sr=8-15&qid=1761418954&discoveredAsins.0=B098JYT4SY, Fields: 0\n  - Form ID: form-22, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_16&sr=8-16&qid=1761418954&discoveredAsins.0=B0FDQ9M1SD, Fields: 0\n  - Form ID: form-23, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_17&sr=8-17&qid=1761418954&discoveredAsins.0=B004IO5BMQ, Fields: 0\n  - Form ID: form-24, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_18&sr=8-18&qid=1761418954&discoveredAsins.0=B01M72LILF, Fields: 0\n  - Form ID: form-25, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_19&sr=8-19&qid=1761418954&discoveredAsins.0=B0DGGW7FFS, Fields: 0\n  - Form ID: form-26, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_20&sr=8-20&qid=1761418954&discoveredAsins.0=B0FH2KWXBY, Fields: 0\n  - Form ID: form-27, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_21_sspa&sr=8-21&qid=1761418954&discoveredAsins.0=B0FF4XBM5N, Fields: 0\n  - Form ID: form-28, Action: https://www.amazon.in/cart/add-to-cart?ref=sr_atc_rt_add_22_sspa&sr=8-22&qid=1761418954&discoveredAsins.0=B0F66P26F6, Fields: 0\n  - Form ID: form-29, Action: https://www.amazon.in/s, Fields: 3\n  - Form ID: form-30, Action: https://www.amazon.in/get, Fields: 0\n\n=== INPUT FIELDS ===\n  - select (type=select-one, name=url, placeholder=) \u2192 #searchDropdownBox\n  - input (type=text, name=field-keywords, placeholder=Search Amazon.in) \u2192 #twotabsearchtextbox\n  - input (type=submit, name=, placeholder=) \u2192 #nav-search-submit-button\n  - select (type=select-one, name=s, placeholder=) \u2192 #s-result-sort-select\n  - input (type=checkbox, name=, placeholder=) \u2192 input\n  - input (type=checkbox, name=, placeholder=) \u2192 input\n  - input (type=checkbox, name=, placeholder=) \u2192 input\n  - input (type=checkbox, name=, placeholder=) \u2192 input\n  - input (type=checkbox, name=, placeholder=) \u2192 input\n  - input (type=checkbox, name=, placeholder=) \u2192 input\n\n=== BUTTONS ===\n  - Show/Hide shortcuts\nshift\n+\nal \u2192 #nav-assist-show-shortcuts\n  - Delivering to Bengaluru 562130 \u2192 #nav-global-location-popover-link\n  - submit \u2192 #nav-search-submit-button\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - All \u2192 #nav-hamburger-menu\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - Sponsored \u2192 text=Sponsored\n  - 3.6 out of 5 stars \u2192 text=3.6 out of 5 stars\n\n=== LINKS (Top 10) ===\n  - Main content \u2192 https://www.amazon.in/s?k=wireless+mouse&ref=nb_sb_noss#skip\n  - Results \u2192 https://www.amazon.in/.s-asin%20a:has(h2)\n  - Search\nalt\n+\n/ \u2192 javascript:void(0)\n  - Cart\nshift\n+\nalt\n+\nC \u2192 javascript:void(0)\n  - Home\nshift\n+\nalt\n+\nH \u2192 javascript:void(0)\n  - Orders\nshift\n+\nalt\n+\nO \u2192 javascript:void(0)\n  - .in \u2192 https://www.amazon.in/ref=nav_logo\n  - Delivering to Bengaluru 562130\nUpdate lo \u2192 https://www.amazon.in/s?k=wireless+mouse&ref=nb_sb_noss\n  - EN \u2192 https://www.amazon.in/customer-preferences/edit?ie=UTF8&pref\n  - Hello, sign in\nAccount & Lists \u2192 https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&o\n\n=== RESULT CONTAINERS (Potential product/item containers) ===\n  - .nav-assistant-list-item (li, 1 children) - Main content\n  - .nav-assistant-link (a, 0 children) - Main content\n  - .nav-assistant-list-item (li, 1 children) - Results\n  - .nav-assistant-link (a, 0 children) - Results\n  - .nav-assistant-list-item (li, 1 children) - Filters\n  - .nav-assistant-link (a, 0 children) - Filters\n  - .nav-assistant-list-item (li, 1 children) - Filters\n  - .nav-assistant-link (button, 0 children) - Filters\n\n=== VISIBLE TEXT (excerpt) ===\nSkip to\nMain content\nResults\nKeyboard shortcuts\nSearch\nalt\n+\n/\nCart\nshift\n+\nalt\n+\nC\nHome\nshift\n+\nalt\n+\nH\nOrders\nshift\n+\nalt\n+\nO\nShow/Hide shortcuts\nshift\n+\nalt\n+\nZ\nTo move between items, use your keyboard's up or down arrows.\n.in\nDelivering to Bengaluru 562130\nUpdate location\nAll\nAll Categories\nAlexa Skills\nAmazon Devices\nAmazon Fashion\nAmazon Fresh\nAmazon Pharmacy\nAppliances\nApps & Games\nAudible Audiobooks\nBaby\nBeauty\nBooks\nCar & Motorbike\nClothing & Accessories\nCollectibles\nComputers & Accessories\nDeals\nElectronics\nFurniture\nGarden & Outdoors\nGift Cards\nGrocery & Gourmet Foods\nHealth & Personal Care\nHome & Kitchen\nIndustrial & Scientific\nJewellery\nKindle Store\nLuggage & Bags\nLuxury Beauty\nMovies & TV Shows\nMP3 Music\nMusic\nMusical Instruments\nOffice Products\nPet Supplies\nPrime Video\nShoes & Handbags\nSoftware\nSports, Fitness & Outdoors\nSubscribe & Save\nTools & Home Improvement\nToys & Games\nUnder \u20b9500\nVideo Games\nWatches\nEN\nHello, sign in\nAccount & Lists\nReturns\n& Orders\n0\nCart\nAll\nFresh\nMX Player\nSell\nBestsellers\nToday's Deals\nMobiles\nNew Releases\nElectronics\nCustomer Service\nHome & Kitchen\nPrime\nFashion\nAmazon Pay\nBooks\nComputers\nHome Improvement\nBeauty & Personal Care\nCar & Motorbike\nToys & Games\nGift Cards\nSports, Fitness & Outdoors\nVideo Games\nGrocery & Gourmet Foods\nCustom Products\nHealth, Household & Personal Care\nAmazonBasics\nBaby\nAudible\nPet Supplies\nSubscribe & Save\nGift Ideas\nFlights\n1-16 of over 2,000 results for \"wireless mouse\"\nSort by:\nFeatured\nPrice: Low to Hig\n\n=== SELECTOR RECOMMENDATIONS ===\nFor search input: #searchDropdownBox\nFor submit button: button[type='submit'], input[type='submit']\nFor results: .nav-assistant-list-item\nFor login: Username: input[type=email], input[name*=user], Password: input[type=password]\n",
+      "selectors": {
+        "inputs": [
+          "#searchDropdownBox",
+          "#twotabsearchtextbox",
+          "#nav-search-submit-button",
+          "#s-result-sort-select",
+          "input",
+          "input",
+          "input",
+          "input",
+          "input",
+          "input",
+          "input",
+          "input",
+          "input",
+          "#p_36/range-slider_slider-item_lower-bound-slider",
+          "#p_36/range-slider_slider-item_upper-bound-slider",
+          ".a-button-input",
+          "input",
+          "input",
+          "input",
+          "input"
+        ],
+        "buttons": [
+          "#nav-assist-show-shortcuts",
+          "#nav-global-location-popover-link",
+          "#nav-search-submit-button",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          "#nav-hamburger-menu",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          "text=Sponsored",
+          "text=3.6 out of 5 stars",
+          "#a-autoid-1-announce",
+          "text=Sponsored",
+          "text=4.1 out of 5 stars",
+          "#a-autoid-2-announce",
+          "text=4.1 out of 5 stars",
+          "#a-autoid-3-announce",
+          "text=4.0 out of 5 stars",
+          "#a-autoid-4-announce",
+          "text=4.0 out of 5 stars",
+          "#a-autoid-5-announce"
+        ],
+        "links": [
+          "#nav-assist-skip-to-main-content",
+          "#nav-assist-skip-to-results",
+          "#nav-assist-search",
+          "#nav-assist-cart",
+          "#nav-assist-home",
+          "#nav-assist-your-orders",
+          "#nav-logo-sprites",
+          "#nav-global-location-popover-link",
+          "text=EN",
+          "text=Hello, sign in\nAccou",
+          "#nav-orders",
+          "#nav-cart",
+          "#nav-hamburger-menu",
+          "text=Fresh",
+          "text=MX Player",
+          "text=Sell",
+          "text=Bestsellers",
+          "text=Today's Deals",
+          "text=Mobiles",
+          "text=New Releases"
+        ],
+        "containers": [
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-menu-item",
+          "shortcut-name",
+          "shortcut-key",
+          "shortcut-key",
+          "nav-assistant-list-item",
+          "nav-assistant-menu-item"
+        ],
+        "forms": [
+          "nav-search-bar-form",
+          "form-1",
+          "form-2",
+          "form-3",
+          "form-4",
+          "form-5",
+          "form-6",
+          "form-7",
+          "form-8",
+          "form-9",
+          "form-10",
+          "form-11",
+          "form-12",
+          "form-13",
+          "form-14",
+          "form-15",
+          "form-16",
+          "form-17",
+          "form-18",
+          "form-19",
+          "form-20",
+          "form-21",
+          "form-22",
+          "form-23",
+          "form-24",
+          "form-25",
+          "form-26",
+          "form-27",
+          "form-28",
+          "form-29",
+          "form-30"
+        ]
+      },
+      "page_state": {
+        "has_results": true,
+        "has_cart": true,
+        "has_login": true,
+        "has_checkout": false
+      },
+      "url": "https://www.amazon.in/s?k=wireless+mouse&ref=nb_sb_noss",
+      "title": "Amazon.in : wireless mouse",
+      "cached": false
+    },
+    "timestamp": "2025-10-26T00:32:54.099912",
+    "hit_count": 0,
+    "last_hit": null
+  },
+  "https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonomic-Power-Saving/dp/B0FF4XBM5N/ref=sr_1_14": {
+    "hash": "4af0fbee0f00a26c0e00ecd4e947377ffe8517108b4a4a77c6cd3dc8e5826b86",
+    "analysis": {
+      "ui_text": "\n=== PAGE ANALYSIS ===\nTitle: Amazon.in: Buy ZEBRONICS Wireless Mouse, 2.4GHz, 3200 DPI, 3 Buttons, Comfortable & Ergonomic, USB Nano Receiver, Power-Saving Mode, Works on Most Surfaces, for Mac | Laptop | Computer (Freego, Black) Online at Low Prices in India | ZEBRONICS Reviews &amp; Ratings\nURL: https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonomic-Power-Saving/dp/B0FF4XBM5N/ref=sr_1_14?dib=eyJ2IjoiMSJ9.9EdbLuaQP3iRmLtLRNpIuRI1pqjzIrdturkAc_fMFnqX8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwSPpN5WS2W4M3Yxzw3wLbCGUSeLouLLMhqdStL3Fsmubi0yn4tBh29dCNvem9uzYsjCCwHX4pzZfKypqROUG9oOckktxkpzi1osAG6eWnoMmFmla5UQF4nmjGcafie7RI3vV8HaRE0yl_2r-U2ZhJ00.WI2Daf3ylWCLZHMZgB3qABRZbKG2xXllC7O2y22l7iY&dib_tag=se&keywords=wireless%2Bmouse&qid=1761418954&sr=8-14&th=1\n\n=== PAGE STATE ===\nHas Results/Products: True\nHas Cart: True\nHas Login Form: True\nHas Checkout: True\n\n=== HEADINGS ===\n  - Skip to\n  - Keyboard shortcuts\n  - ZEBRONICS Wireless Mouse, 2.4GHz, 3200 DPI, 3 Buttons, Comfortable & Ergonomic, USB Nano Receiver, Power-Saving Mode, Works on Most Surfaces, for Mac | Laptop | Computer (Freego, Black)\n  - About this item\n  - Frequently bought together\n\n=== FORMS ===\n  - Form ID: nav-search-bar-form, Action: https://www.amazon.in/s/ref=nb_sb_noss, Fields: 3\n  - Form ID: addToCart, Action: https://www.amazon.in/gp/product/handle-buy-box/ref=dp_start-bbf_1_glance, Fields: 4\n  - Form ID: form-2, Action: javascript:void(0);, Fields: 0\n  - Form ID: form-3, Action: javascript:void(0);, Fields: 0\n  - Form ID: form-4, Action: https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonomic-Power-Saving/dp/B0FF4XBM5N/ref=sr_1_14?dib=eyJ2IjoiMSJ9.9EdbLuaQP3iRmLtLRNpIuRI1pqjzIrdturkAc_fMFnqX8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwSPpN5WS2W4M3Yxzw3wLbCGUSeLouLLMhqdStL3Fsmubi0yn4tBh29dCNvem9uzYsjCCwHX4pzZfKypqROUG9oOckktxkpzi1osAG6eWnoMmFmla5UQF4nmjGcafie7RI3vV8HaRE0yl_2r-U2ZhJ00.WI2Daf3ylWCLZHMZgB3qABRZbKG2xXllC7O2y22l7iY&dib_tag=se&keywords=wireless%2Bmouse&qid=1761418954&sr=8-14&th=1, Fields: 0\n  - Form ID: form-5, Action: https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonomic-Power-Saving/dp/B0FF4XBM5N/ref=sr_1_14?dib=eyJ2IjoiMSJ9.9EdbLuaQP3iRmLtLRNpIuRI1pqjzIrdturkAc_fMFnqX8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwSPpN5WS2W4M3Yxzw3wLbCGUSeLouLLMhqdStL3Fsmubi0yn4tBh29dCNvem9uzYsjCCwHX4pzZfKypqROUG9oOckktxkpzi1osAG6eWnoMmFmla5UQF4nmjGcafie7RI3vV8HaRE0yl_2r-U2ZhJ00.WI2Daf3ylWCLZHMZgB3qABRZbKG2xXllC7O2y22l7iY&dib_tag=se&keywords=wireless%2Bmouse&qid=1761418954&sr=8-14&th=1, Fields: 0\n  - Form ID: form-6, Action: https://www.amazon.in/cart/add-to-cart/ref=pd_bxgy_crt?_encoding=UTF8&pd_rd_w=PyogE&content-id=amzn1.sym.d1afc5d3-2e83-45f5-8382-2dc0d946ef8f&pf_rd_p=d1afc5d3-2e83-45f5-8382-2dc0d946ef8f&pf_rd_r=AYRBMJQENE8S0MMHMM6J&pd_rd_wg=epB6B&pd_rd_r=8382aacc-e6f3-401b-a15e-22100361e718, Fields: 1\n  - Form ID: form-7, Action: https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonomic-Power-Saving/dp/B0FF4XBM5N/get, Fields: 0\n\n=== INPUT FIELDS ===\n  - select (type=select-one, name=url, placeholder=) \u2192 #searchDropdownBox\n  - input (type=text, name=field-keywords, placeholder=Search Amazon.in) \u2192 #twotabsearchtextbox\n  - input (type=submit, name=, placeholder=) \u2192 #nav-search-submit-button\n  - select (type=select-one, name=quantity, placeholder=) \u2192 #quantity\n  - input (type=submit, name=submit.add-to-cart, placeholder=) \u2192 #add-to-cart-button\n  - input (type=submit, name=submit.buy-now, placeholder=) \u2192 #buy-now-button\n  - input (type=checkbox, name=gift-wrap, placeholder=) \u2192 #gift-wrap\n  - input (type=submit, name=, placeholder=) \u2192 .a-button-input\n  - input (type=submit, name=, placeholder=) \u2192 .a-button-input\n  - input (type=submit, name=, placeholder=) \u2192 .a-button-input\n\n=== BUTTONS ===\n  - Add to cart\nshift\n+\nalt\n+\nK \u2192 #nav-assist-add-to-cart\n  - Show/Hide shortcuts\nshift\n+\nal \u2192 #nav-assist-show-shortcuts\n  - Delivering to Bengaluru 562130 \u2192 #nav-global-location-popover-link\n  - submit \u2192 #nav-search-submit-button\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - All \u2192 #nav-hamburger-menu\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - Sponsored \u2192 #af-label-primary-link-desktop-detail-ilm\n\n=== LINKS (Top 10) ===\n  - Main content \u2192 https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonom\n  - About this item \u2192 https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonom\n  - Buying options \u2192 https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonom\n  - Reviews \u2192 https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonom\n  - Search\nalt\n+\n/ \u2192 javascript:void(0)\n  - Cart\nshift\n+\nalt\n+\nC \u2192 javascript:void(0)\n  - Home\nshift\n+\nalt\n+\nH \u2192 javascript:void(0)\n  - Orders\nshift\n+\nalt\n+\nO \u2192 javascript:void(0)\n  - .in \u2192 https://www.amazon.in/ref=nav_logo\n  - Delivering to Bengaluru 562130\nUpdate lo \u2192 https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonom\n\n=== RESULT CONTAINERS (Potential product/item containers) ===\n  - .nav-assistant-list-item (li, 1 children) - Main content\n  - .nav-assistant-link (a, 0 children) - Main content\n  - .nav-assistant-list-item (li, 1 children) - About this item\n  - .nav-assistant-link (a, 0 children) - About this item\n  - .nav-assistant-list-item (li, 1 children) - About this item\n  - .nav-assistant-link (a, 0 children) - About this item\n  - .nav-assistant-list-item (li, 1 children) - About this item\n  - .nav-assistant-link (a, 0 children) - About this item\n\n=== VISIBLE TEXT (excerpt) ===\nSkip to\nMain content\nAbout this item\nBuying options\nReviews\nKeyboard shortcuts\nSearch\nalt\n+\n/\nCart\nshift\n+\nalt\n+\nC\nHome\nshift\n+\nalt\n+\nH\nOrders\nshift\n+\nalt\n+\nO\nAdd to cart\nshift\n+\nalt\n+\nK\nShow/Hide shortcuts\nshift\n+\nalt\n+\nZ\nTo move between items, use your keyboard's up or down arrows.\n.in\nDelivering to Bengaluru 562130\nUpdate location\nAll\nAll Categories\nAlexa Skills\nAmazon Devices\nAmazon Fashion\nAmazon Fresh\nAmazon Pharmacy\nAppliances\nApps & Games\nAudible Audiobooks\nBaby\nBeauty\nBooks\nCar & Motorbike\nClothing & Accessories\nCollectibles\nComputers & Accessories\nDeals\nElectronics\nFurniture\nGarden & Outdoors\nGift Cards\nGrocery & Gourmet Foods\nHealth & Personal Care\nHome & Kitchen\nIndustrial & Scientific\nJewellery\nKindle Store\nLuggage & Bags\nLuxury Beauty\nMovies & TV Shows\nMP3 Music\nMusic\nMusical Instruments\nOffice Products\nPet Supplies\nPrime Video\nShoes & Handbags\nSoftware\nSports, Fitness & Outdoors\nSubscribe & Save\nTools & Home Improvement\nToys & Games\nUnder \u20b9500\nVideo Games\nWatches\nEN\nHello, sign in\nAccount & Lists\nReturns\n& Orders\n0\nCart\nAll\nFresh\nMX Player\nSell\nBestsellers\nToday's Deals\nMobiles\nNew Releases\nElectronics\nCustomer Service\nHome & Kitchen\nPrime\nFashion\nAmazon Pay\nBooks\nComputers\nHome Improvement\nBeauty & Personal Care\nCar & Motorbike\nToys & Games\nGift Cards\nSports, Fitness & Outdoors\nVideo Games\nGrocery & Gourmet Foods\nCustom Products\nHealth, Household & Personal Care\nAmazonBasics\nBaby\nAudible\nPet Supplies\nSubscribe & Save\nGift Ideas\nFlights\nMobiles & Accessories\nLa\n\n=== SELECTOR RECOMMENDATIONS ===\nFor search input: #searchDropdownBox\nFor submit button: button[type='submit'], input[type='submit']\nFor results: .nav-assistant-list-item\nFor login: Username: input[type=email], input[name*=user], Password: input[type=password]\n",
+      "selectors": {
+        "inputs": [
+          "#searchDropdownBox",
+          "#twotabsearchtextbox",
+          "#nav-search-submit-button",
+          "#quantity",
+          "#add-to-cart-button",
+          "#buy-now-button",
+          "#gift-wrap",
+          ".a-button-input",
+          ".a-button-input",
+          ".a-button-input",
+          ".a-button-input",
+          ".a-button-input",
+          ".a-button-input",
+          ".a-button-input",
+          "[name=\"1\"]",
+          "[name=\"2\"]",
+          "[name=\"0\"]",
+          "#fbtCheck-1",
+          "#fbtCheck-2",
+          "#fbtCheck-3"
+        ],
+        "buttons": [
+          "#nav-assist-add-to-cart",
+          "#nav-assist-show-shortcuts",
+          "#nav-global-location-popover-link",
+          "#nav-search-submit-button",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          "#nav-hamburger-menu",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          "#af-label-primary-link-desktop-detail-ilm",
+          "#contextualIngressPtLink",
+          "text=Secure transaction",
+          "#add-to-cart-button",
+          "#buy-now-button",
+          ".ssf-share-trigger",
+          ".a-button-input",
+          ".a-button-input",
+          ".a-button-input",
+          ".a-button-input",
+          ".a-button-input"
+        ],
+        "links": [
+          "#nav-assist-skip-to-main-content",
+          "#nav-assist-skip-to-about-this-item",
+          "#nav-assist-skip-to-buying-options",
+          "#nav-assist-skip-to-reviews",
+          "#nav-assist-search",
+          "#nav-assist-cart",
+          "#nav-assist-home",
+          "#nav-assist-your-orders",
+          "#nav-logo-sprites",
+          "#nav-global-location-popover-link",
+          "text=EN",
+          "text=Hello, sign in\nAccou",
+          "#nav-orders",
+          "#nav-cart",
+          "#nav-hamburger-menu",
+          "text=Fresh",
+          "text=MX Player",
+          "text=Sell",
+          "text=Bestsellers",
+          "text=Today's Deals"
+        ],
+        "containers": [
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item"
+        ],
+        "forms": [
+          "nav-search-bar-form",
+          "addToCart",
+          "form-2",
+          "form-3",
+          "form-4",
+          "form-5",
+          "form-6",
+          "form-7"
+        ]
+      },
+      "page_state": {
+        "has_results": true,
+        "has_cart": true,
+        "has_login": true,
+        "has_checkout": true
+      },
+      "url": "https://www.amazon.in/ZEBRONICS-Wireless-Comfortable-Ergonomic-Power-Saving/dp/B0FF4XBM5N/ref=sr_1_14?dib=eyJ2IjoiMSJ9.9EdbLuaQP3iRmLtLRNpIuRI1pqjzIrdturkAc_fMFnqX8f0I6EOdymk-gDsRUo5E1XDn3wSzkykJ7l7khwrmwSPpN5WS2W4M3Yxzw3wLbCGUSeLouLLMhqdStL3Fsmubi0yn4tBh29dCNvem9uzYsjCCwHX4pzZfKypqROUG9oOckktxkpzi1osAG6eWnoMmFmla5UQF4nmjGcafie7RI3vV8HaRE0yl_2r-U2ZhJ00.WI2Daf3ylWCLZHMZgB3qABRZbKG2xXllC7O2y22l7iY&dib_tag=se&keywords=wireless%2Bmouse&qid=1761418954&sr=8-14&th=1",
+      "title": "Amazon.in: Buy ZEBRONICS Wireless Mouse, 2.4GHz, 3200 DPI, 3 Buttons, Comfortable & Ergonomic, USB Nano Receiver, Power-Saving Mode, Works on Most Surfaces, for Mac | Laptop | Computer (Freego, Black) Online at Low Prices in India | ZEBRONICS Reviews &amp; Ratings",
+      "cached": false
+    },
+    "timestamp": "2025-10-26T00:33:28.354422",
+    "hit_count": 0,
+    "last_hit": null
+  },
+  "https://www.amazon.in": {
+    "hash": "37f68930225f09ab7d7888096c6f834231c303558bb0d88faef67cb55666f3cc",
+    "analysis": {
+      "ui_text": "\n=== PAGE ANALYSIS ===\nTitle: Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in\nURL: https://www.amazon.in/\n\n=== PAGE STATE ===\nHas Results/Products: True\nHas Cart: True\nHas Login Form: True\nHas Checkout: False\n\n=== HEADINGS ===\n  - Skip to\n  - Keyboard shortcuts\n  - Revamp your home in style\n  - Appliances for your home | Up to 55% off\n  - Starting \u20b9149 | Headphones\n\n=== FORMS ===\n  - Form ID: nav-search-bar-form, Action: https://www.amazon.in/s/ref=nb_sb_noss, Fields: 3\n  - Form ID: form-1, Action: https://www.amazon.in/get, Fields: 0\n\n=== INPUT FIELDS ===\n  - select (type=select-one, name=url, placeholder=) \u2192 #searchDropdownBox\n  - input (type=text, name=field-keywords, placeholder=Search Amazon.in) \u2192 #twotabsearchtextbox\n  - input (type=submit, name=, placeholder=) \u2192 #nav-search-submit-button\n\n=== BUTTONS ===\n  - Show/Hide shortcuts\nshift\n+\nal \u2192 #nav-assist-show-shortcuts\n  - Delivering to Bengaluru 562130 \u2192 #nav-global-location-popover-link\n  - submit \u2192 #nav-search-submit-button\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - All \u2192 #nav-hamburger-menu\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - submit \u2192 .nav-flyout-button.nav-icon.nav-arrow\n  - Previous slide \u2192 text=Previous slide\n  - Next slide \u2192 text=Next slide\n\n=== LINKS (Top 10) ===\n  - Main content \u2192 https://www.amazon.in/#skippedLink\n  - Search\nalt\n+\n/ \u2192 javascript:void(0)\n  - Cart\nshift\n+\nalt\n+\nC \u2192 javascript:void(0)\n  - Home\nshift\n+\nalt\n+\nH \u2192 javascript:void(0)\n  - Orders\nshift\n+\nalt\n+\nO \u2192 javascript:void(0)\n  - .in \u2192 https://www.amazon.in/ref=nav_logo\n  - Delivering to Bengaluru 562130\nUpdate lo \u2192 https://www.amazon.in/\n  - EN \u2192 https://www.amazon.in/customer-preferences/edit?ie=UTF8&pref\n  - Hello, sign in\nAccount & Lists \u2192 https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&o\n  - Returns\n& Orders \u2192 https://www.amazon.in/gp/css/order-history?ref_=nav_orders_f\n\n=== RESULT CONTAINERS (Potential product/item containers) ===\n  - .nav-assistant-list-item (li, 1 children) - Main content\n  - .nav-assistant-link (a, 0 children) - Main content\n  - .nav-assistant-list-item (li, 1 children) - Search\nalt\n+\n/\n  - .nav-assistant-menu-item (a, 1 children) - Search\nalt\n+\n/\n  - .shortcut-name (span, 0 children) - Search\n  - .shortcut-key (span, 0 children) - alt\n  - .shortcut-key (span, 0 children) - /\n  - .nav-assistant-list-item (li, 1 children) - Cart\nshift\n+\nalt\n+\nC\n\n=== VISIBLE TEXT (excerpt) ===\nSkip to\nMain content\nKeyboard shortcuts\nSearch\nalt\n+\n/\nCart\nshift\n+\nalt\n+\nC\nHome\nshift\n+\nalt\n+\nH\nOrders\nshift\n+\nalt\n+\nO\nShow/Hide shortcuts\nshift\n+\nalt\n+\nZ\nTo move between items, use your keyboard's up or down arrows.\n.in\nDelivering to Bengaluru 562130\nUpdate location\nAll\nAll Categories\nAlexa Skills\nAmazon Devices\nAmazon Fashion\nAmazon Fresh\nAmazon Pharmacy\nAppliances\nApps & Games\nAudible Audiobooks\nBaby\nBeauty\nBooks\nCar & Motorbike\nClothing & Accessories\nCollectibles\nComputers & Accessories\nDeals\nElectronics\nFurniture\nGarden & Outdoors\nGift Cards\nGrocery & Gourmet Foods\nHealth & Personal Care\nHome & Kitchen\nIndustrial & Scientific\nJewellery\nKindle Store\nLuggage & Bags\nLuxury Beauty\nMovies & TV Shows\nMP3 Music\nMusic\nMusical Instruments\nOffice Products\nPet Supplies\nPrime Video\nShoes & Handbags\nSoftware\nSports, Fitness & Outdoors\nSubscribe & Save\nTools & Home Improvement\nToys & Games\nUnder \u20b9500\nVideo Games\nWatches\nEN\nHello, sign in\nAccount & Lists\nReturns\n& Orders\n0\nCart\nAll\nFresh\nMX Player\nSell\nBestsellers\nToday's Deals\nMobiles\nNew Releases\nElectronics\nCustomer Service\nHome & Kitchen\nPrime\nFashion\nAmazon Pay\nBooks\nComputers\nHome Improvement\nBeauty & Personal Care\nCar & Motorbike\nToys & Games\nGift Cards\nSports, Fitness & Outdoors\nVideo Games\nGrocery & Gourmet Foods\nCustom Products\nHealth, Household & Personal Care\nAmazonBasics\nBaby\nAudible\nPet Supplies\nSubscribe & Save\nGift Ideas\nFlights\nPrevious slide\nNext slide\nRevamp your home in style\nCushion covers, bedsheets & more\nFiguri\n\n=== SELECTOR RECOMMENDATIONS ===\nFor search input: #searchDropdownBox\nFor submit button: button[type='submit'], input[type='submit']\nFor results: .nav-assistant-list-item\nFor login: Username: input[type=email], input[name*=user], Password: input[type=password]\n",
+      "selectors": {
+        "inputs": [
+          "#searchDropdownBox",
+          "#twotabsearchtextbox",
+          "#nav-search-submit-button"
+        ],
+        "buttons": [
+          "#nav-assist-show-shortcuts",
+          "#nav-global-location-popover-link",
+          "#nav-search-submit-button",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          "#nav-hamburger-menu",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          ".nav-flyout-button.nav-icon.nav-arrow",
+          "text=Previous slide",
+          "text=Next slide",
+          "text=Watch now",
+          ".plainButton--38kvm.muteButton--2YyOU",
+          ".playButton--wDABG.playPauseButton--In8sL.plainButton--38kvm.paused--3RITy.persistent--Pt2B3",
+          "text=Earns commissions",
+          "#navBackToTop",
+          ".nav-arrow.icp-up-down-arrow",
+          "#icp-touch-link-country"
+        ],
+        "links": [
+          "#nav-assist-skip-to-main-content",
+          "#nav-assist-search",
+          "#nav-assist-cart",
+          "#nav-assist-home",
+          "#nav-assist-your-orders",
+          "#nav-logo-sprites",
+          "#nav-global-location-popover-link",
+          "text=EN",
+          "text=Hello, sign in\nAccou",
+          "#nav-orders",
+          "#nav-cart",
+          "#nav-hamburger-menu",
+          "text=Fresh",
+          "text=MX Player",
+          "text=Sell",
+          "text=Bestsellers",
+          "text=Today's Deals",
+          "text=Mobiles",
+          "text=New Releases",
+          "text=Electronics"
+        ],
+        "containers": [
+          "nav-assistant-list-item",
+          "nav-assistant-link",
+          "nav-assistant-list-item",
+          "nav-assistant-menu-item",
+          "shortcut-name",
+          "shortcut-key",
+          "shortcut-key",
+          "nav-assistant-list-item",
+          "nav-assistant-menu-item",
+          "shortcut-name",
+          "shortcut-key",
+          "shortcut-key",
+          "shortcut-key",
+          "nav-assistant-list-item",
+          "nav-assistant-menu-item"
+        ],
+        "forms": [
+          "nav-search-bar-form",
+          "form-1"
+        ]
+      },
+      "page_state": {
+        "has_results": true,
+        "has_cart": true,
+        "has_login": true,
+        "has_checkout": false
+      },
+      "url": "https://www.amazon.in/",
+      "title": "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in",
+      "cached": false
+    },
+    "timestamp": "2025-10-26T00:42:50.951872",
+    "hit_count": 0,
+    "last_hit": null
+  }
+}
