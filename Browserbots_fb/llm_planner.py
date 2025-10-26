@@ -3,7 +3,19 @@ import json
 import re
 import os
 
-# client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+import sys
+# Get the API key from environment variables
+client= os.environ.get("OPENAI_API_KEY") 
+
+# Add a check to ensure the key was found
+if not client:
+    print("ERROR: OPENAI_API_KEY environment variable not set.")
+    # You might want to raise an exception or exit here
+    # raise ValueError("OpenAI API Key not found in environment variables")
+    sys.exit(1) # Or exit if running as a script
+
+# Now use the 'api_key' variable when initializing your OpenAI client
+# Example: client = OpenAI(api_key=api_key)
 
 
 class LLMPlanner:
